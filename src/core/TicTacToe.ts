@@ -3,14 +3,14 @@ import Player from "../types/Player";
 
 class TicTacToe implements ITicTacToe {
     // User generated rules
-    public mapSize: number = 3;
-    public minTile: number = 3;
-    public minStreak: number = 3;
+    public mapSize = 3;
+    public minTile = 3;
+    public minStreak = 3;
 
     public tile: Array<Player | null> = [];
     public turn: Player = "Player 1";
-    public isStarted: boolean = false;
-    public withAI: boolean = false;
+    public isStarted = false;
+    public withAI = false;
 
     /**
      * Initialize the tic tac toe game
