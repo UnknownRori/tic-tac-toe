@@ -49,7 +49,12 @@ startGameButton.addEventListener('click', () => {
     gameTileElement.forEach((element) => {
         element.addEventListener('click', () => {
             const index = parseInt(<string>element.dataset[gameTileDataSet])
-            game.claim(index);
+
+            if (element.innerText == '') {
+                element.innerText = game.turn;
+
+                game.claim(index);
+            }
         })
     })
 });

@@ -8,7 +8,7 @@ class TicTacToe implements ITicTacToe {
     public minStreak = 3;
 
     public tile: Array<Player | null> = [];
-    public turn: Player = "Player 1";
+    public turn: Player = "X";
     public isStarted = false;
     public withAI = false;
 
@@ -33,7 +33,11 @@ class TicTacToe implements ITicTacToe {
      * @return void
      */
     public claim(index: number): void {
-        //
+        if (this.turn == "O") {
+            this.turn = "X";
+        } else {
+            this.turn = "O";
+        }
     }
 
     /**
