@@ -15,7 +15,7 @@ A normal tic tac toe game with resizeable board
 example board
  1 2 3 4 5
 1X
-2 X
-3  X
+2  X
+3   X
 4
 5
