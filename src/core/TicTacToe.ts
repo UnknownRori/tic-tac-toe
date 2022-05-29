@@ -43,6 +43,10 @@ class TicTacToe implements ITicTacToe {
      * @return void
      */
     public claim(index: number): void {
+        if (this.tile[index] == null) {
+            this.tile[index] = this.turn;
+        }
+
         if (this.turn == "O") {
             this.turn = "X";
         } else {
