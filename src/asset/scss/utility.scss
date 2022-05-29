@@ -6,6 +6,10 @@
     height: 100vh;
 }
 
+.fixed {
+    position: fixed;
+}
+
 .rounded {
     border-radius: 0.25rem;
 }
@@ -39,6 +43,11 @@
     margin-bottom: auto;
 }
 
+.my-2 {
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
 .mx-auto {
     margin-left: auto;
     margin-right: auto;
@@ -54,4 +63,8 @@
 
 .hidden {
     display: none;
+}
+
+.w-30 {
+    width: 30%;
 }
