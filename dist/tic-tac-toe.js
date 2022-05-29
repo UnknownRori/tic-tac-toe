@@ -859,6 +859,15 @@ startGameButton.addEventListener('click', () => {
         alert("Please enter above 1");
         return;
     }
+    // Check if the rule set by player is logical
+    if (mapSize < minTile) {
+        alert("Minimum Tile to win cannot exceed map size");
+        return;
+    }
+    if ((mapSize * mapSize) < ((minStreak * mapSize))) {
+        alert("Minimum streak cannot pass threshold");
+        return;
+    }
     // Remove the event ui
     mainUIElement.classList.remove('bg-ui');
     newGameMenuUIElement.classList.add('hidden');
