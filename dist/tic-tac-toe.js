@@ -689,6 +689,78 @@ module.exports = styleTagTransform;
 
 /***/ }),
 
+/***/ "./src/core/TicTacToe.ts":
+/*!*******************************!*\
+  !*** ./src/core/TicTacToe.ts ***!
+  \*******************************/
+/***/ ((__unused_webpack_module, exports) => {
+
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+class TicTacToe {
+    constructor() {
+        // User generated rules
+        this.mapSize = 3;
+        this.minTile = 3;
+        this.minStreak = 3;
+        this.tile = [];
+        this.turn = "Player 1";
+        this.isStarted = false;
+        this.withAI = false;
+    }
+    /**
+     * Initialize the tic tac toe game
+     * @return void
+     */
+    start() {
+        //
+    }
+    /**
+     * Reset current game enviroment
+     * @return void
+     */
+    reset() {
+        //
+    }
+    /**
+     * Claim a tile using current player turn
+     * @return void
+     */
+    claim() {
+        //
+    }
+    /**
+     * Check the all tile for the winner
+     * @return void
+     */
+    winChecker() {
+        //
+    }
+}
+exports["default"] = TicTacToe;
+
+
+/***/ }),
+
+/***/ "./src/index.ts":
+/*!**********************!*\
+  !*** ./src/index.ts ***!
+  \**********************/
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+const TicTacToe_1 = __importDefault(__webpack_require__(/*! ./core/TicTacToe */ "./src/core/TicTacToe.ts"));
+__webpack_require__(/*! ./asset/scss/style.scss */ "./src/asset/scss/style.scss");
+const game = new TicTacToe_1.default();
+game.start();
+
+
+/***/ }),
+
 /***/ "./src/asset/background/background1.webp":
 /*!***********************************************!*\
   !*** ./src/asset/background/background1.webp ***!
@@ -719,7 +791,7 @@ module.exports = __webpack_require__.p + "d82b60ce6d69e4d91a95.webp";
 /******/ 		};
 /******/ 	
 /******/ 		// Execute the module function
-/******/ 		__webpack_modules__[moduleId](module, module.exports, __webpack_require__);
+/******/ 		__webpack_modules__[moduleId].call(module.exports, module, module.exports, __webpack_require__);
 /******/ 	
 /******/ 		// Return the exports of the module
 /******/ 		return module.exports;
@@ -833,20 +905,12 @@ module.exports = __webpack_require__.p + "d82b60ce6d69e4d91a95.webp";
 /******/ 	})();
 /******/ 	
 /************************************************************************/
-var __webpack_exports__ = {};
-// This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
-(() => {
-var exports = __webpack_exports__;
-/*!**********************!*\
-  !*** ./src/index.ts ***!
-  \**********************/
-
-Object.defineProperty(exports, "__esModule", ({ value: true }));
-__webpack_require__(/*! ./asset/scss/style.scss */ "./src/asset/scss/style.scss");
-console.log("Hello, world!");
-
-})();
-
+/******/ 	
+/******/ 	// startup
+/******/ 	// Load entry module and return exports
+/******/ 	// This entry module is referenced by other modules so it can't be inlined
+/******/ 	var __webpack_exports__ = __webpack_require__("./src/index.ts");
+/******/ 	
 /******/ })()
 ;
 //# sourceMappingURL=tic-tac-toe.js.map

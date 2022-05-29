@@ -1,3 +1,5 @@
+import TicTacToe from "./core/TicTacToe"
 import "./asset/scss/style.scss"
 
-console.log("Hello, world!");
+const game = new TicTacToe();
+game.start();
