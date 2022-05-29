@@ -35,7 +35,11 @@ class TicTacToe implements ITicTacToe {
      * @return void
      */
     public reset(): void {
-        //
+        this.tile = [];
+        this.turn = "X";
+        this.mapSize = 3;
+        this.minTile = 3;
+        this.minStreak = 3;
     }
 
     /**

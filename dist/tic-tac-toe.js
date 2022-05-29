@@ -754,13 +754,20 @@ class TicTacToe {
      * @return void
      */
     reset() {
-        //
+        this.tile = [];
+        this.turn = "X";
+        this.mapSize = 3;
+        this.minTile = 3;
+        this.minStreak = 3;
     }
     /**
      * Claim a tile using current player turn
      * @return void
      */
     claim(index) {
+        if (this.tile[index] == null) {
+            this.tile[index] = this.turn;
+        }
         if (this.turn == "O") {
             this.turn = "X";
         }
