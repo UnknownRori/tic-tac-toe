@@ -51,6 +51,8 @@ class TicTacToe implements ITicTacToe {
             this.tile[index] = this.turn;
         }
 
+        this.winChecker();
+
         if (this.turn == "O") {
             this.turn = "X";
         } else {
@@ -65,7 +67,9 @@ class TicTacToe implements ITicTacToe {
      * @return void
      */
     public winChecker(): void {
-        //
+        if (this.tile.every(element => element !== null)) {
+            alert('Draw!');
+        }
     }
 
 
