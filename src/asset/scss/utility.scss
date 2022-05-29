@@ -1,9 +1,9 @@
 .w-screen-full {
-    width: 100vw;
+    min-width: 100vw;
 }
 
 .h-screen-full {
-    height: 100vh;
+    min-height: 100vh;
 }
 
 .fixed {
@@ -32,6 +32,10 @@
 
 .p-8 {
     padding: 8px;
+}
+
+.p-20 {
+    padding: 30px;
 }
 
 .m-auto {
