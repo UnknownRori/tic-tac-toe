@@ -35,8 +35,9 @@ ___CSS_LOADER_EXPORT___.i(_node_modules_css_loader_dist_cjs_js_components_button
 ___CSS_LOADER_EXPORT___.i(_node_modules_css_loader_dist_cjs_js_components_form_component_scss__WEBPACK_IMPORTED_MODULE_4__["default"]);
 ___CSS_LOADER_EXPORT___.i(_node_modules_css_loader_dist_cjs_js_components_background_scss__WEBPACK_IMPORTED_MODULE_5__["default"]);
 ___CSS_LOADER_EXPORT___.i(_node_modules_css_loader_dist_cjs_js_components_tile_scss__WEBPACK_IMPORTED_MODULE_6__["default"]);
+___CSS_LOADER_EXPORT___.push([module.id, "@import url(https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500&display=swap);"]);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "* {\n  margin: 0;\n  padding: 0;\n  box-sizing: border-box;\n}", "",{"version":3,"sources":["webpack://./src/asset/scss/style.scss"],"names":[],"mappings":"AAOA;EACI,SAAA;EACA,UAAA;EACA,sBAAA;AADJ","sourcesContent":["// Import\r\n@import url(./utility.scss);\r\n@import url(./components/button.scss);\r\n@import url(./components/form-component.scss);\r\n@import url(./components/background.scss);\r\n@import url(./components/tile.scss);\r\n\r\n* {\r\n    margin: 0;\r\n    padding: 0;\r\n    box-sizing: border-box;\r\n}\r\n"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, "* {\n  margin: 0;\n  padding: 0;\n  box-sizing: border-box;\n  font-family: \"Fira Code\", monospace, sans-serif;\n}", "",{"version":3,"sources":["webpack://./src/asset/scss/style.scss"],"names":[],"mappings":"AASA;EACI,SAAA;EACA,UAAA;EACA,sBAAA;EACA,+CAAA;AAFJ","sourcesContent":["// Import\r\n@import url(./utility.scss);\r\n@import url(./components/button.scss);\r\n@import url(./components/form-component.scss);\r\n@import url(./components/background.scss);\r\n@import url(./components/tile.scss);\r\n\r\n@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500&display=swap');\r\n\r\n* {\r\n    margin: 0;\r\n    padding: 0;\r\n    box-sizing: border-box;\r\n    font-family: \"Fira Code\", monospace, sans-serif;\r\n}\r\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -145,7 +146,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".tile {\r\n    width: 40px;\r\n    height: 40px;\r\n    border: 0.5 solid gray;\r\n    margin: 0.15rem;\r\n    text-align: center;\r\n}", "",{"version":3,"sources":["webpack://./src/asset/scss/components/tile.scss"],"names":[],"mappings":"AAAA;IACI,WAAW;IACX,YAAY;IACZ,sBAAsB;IACtB,eAAe;IACf,kBAAkB;AACtB","sourcesContent":[".tile {\r\n    width: 40px;\r\n    height: 40px;\r\n    border: 0.5 solid gray;\r\n    margin: 0.15rem;\r\n    text-align: center;\r\n}"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, ".tile {\r\n    width: 40px;\r\n    height: 40px;\r\n    border: 0.5 solid gray;\r\n    margin: 0.15rem;\r\n    text-align: center;\r\n    font-size: large;\r\n}", "",{"version":3,"sources":["webpack://./src/asset/scss/components/tile.scss"],"names":[],"mappings":"AAAA;IACI,WAAW;IACX,YAAY;IACZ,sBAAsB;IACtB,eAAe;IACf,kBAAkB;IAClB,gBAAgB;AACpB","sourcesContent":[".tile {\r\n    width: 40px;\r\n    height: 40px;\r\n    border: 0.5 solid gray;\r\n    margin: 0.15rem;\r\n    text-align: center;\r\n    font-size: large;\r\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -733,7 +734,7 @@ class TicTacToe {
         this.minTile = 3;
         this.minStreak = 3;
         this.tile = [];
-        this.turn = "Player 1";
+        this.turn = "X";
         this.isStarted = false;
         this.withAI = false;
     }
@@ -756,7 +757,12 @@ class TicTacToe {
      * @return void
      */
     claim(index) {
-        //
+        if (this.turn == "O") {
+            this.turn = "X";
+        }
+        else {
+            this.turn = "O";
+        }
     }
     /**
      * Check the all tile for the winner
@@ -820,6 +826,7 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 const TicTacToe_1 = __importDefault(__webpack_require__(/*! ./core/TicTacToe */ "./src/core/TicTacToe.ts"));
 __webpack_require__(/*! ./asset/scss/style.scss */ "./src/asset/scss/style.scss");
 const createTile_1 = __importDefault(__webpack_require__(/*! ./helpers/createTile */ "./src/helpers/createTile.ts"));
+// Game enviroment
 const gameTileID = 'gameElement';
 const gameTileDataSet = 'tile';
 const gameElement = document.querySelector('#game');
@@ -836,34 +843,45 @@ const startGameButton = document.querySelector('#startGame');
 const resetGameButton = document.querySelector('#resetGame');
 const game = new TicTacToe_1.default();
 startGameButton.addEventListener('click', () => {
+    // Parse the map, min tile, min streak value.
     const mapSize = parseInt(mapSizeElement.value);
     const minTile = parseInt(minTileElement.value);
     const minStreak = parseInt(winStreakElement.value);
+    // Check if the value below 2 or 1
     if (mapSize < 1 || minTile < 2 || minStreak < 1) {
         alert("Please enter above 1");
         return;
     }
+    // Remove the event ui
     mainUIElement.classList.remove('bg-ui');
     newGameMenuUIElement.classList.add('hidden');
     resetGameMenuUIElement.classList.remove('hidden');
+    // Insert the parsed value inside the game API
     game.mapSize = mapSize;
     game.minTile = minTile;
     game.minStreak = minStreak;
+    // Create the tile and put it in variable
     (0, createTile_1.default)(mapSize, gameElement, gameTileID, gameTileDataSet);
     const gameTileElement = document.querySelectorAll(`#${gameTileID}`);
+    // Start the game and init the event listener
     game.start();
     gameTileElement.forEach((element) => {
         element.addEventListener('click', () => {
             const index = parseInt(element.dataset[gameTileDataSet]);
-            game.claim(index);
+            if (element.innerText == '') {
+                element.innerText = game.turn;
+                game.claim(index);
+            }
         });
     });
 });
 resetGameButton.addEventListener('click', () => {
+    // Start up the event ui
     mainUIElement.classList.add('bg-ui');
     newGameMenuUIElement.classList.remove('hidden');
     resetGameMenuUIElement.classList.add('hidden');
     gameElement.innerHTML = '';
+    // Reset the game
     game.reset();
 });
 
