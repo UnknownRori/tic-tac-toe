@@ -4,6 +4,9 @@ module.exports = {
     mode: 'development',
     devtool: "source-map",
     entry: './src/index.ts',
+    resolve: {
+        extensions: ['.ts', '.js', '.json', '.d.ts']
+    },
     output: {
         filename: 'tic-tac-toe.js',
         path: path.resolve(__dirname, 'dist'),
