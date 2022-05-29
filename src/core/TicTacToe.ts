@@ -11,12 +11,18 @@ class TicTacToe implements ITicTacToe {
     public turn: Player = "X";
     public isStarted = false;
     public withAI = false;
+    public gameTileElement: NodeListOf<HTMLElement>;
+
+    constructor(gameTileElement: NodeListOf<HTMLElement>) {
+        this.gameTileElement = gameTileElement;
+    }
 
     /**
      * Initialize the tic tac toe game
      * @return void
      */
-    public start(): void {
+    public start(gameTileElement: NodeListOf<HTMLElement>): void {
+        this.gameTileElement = gameTileElement;
         this.generateTile();
     }
 

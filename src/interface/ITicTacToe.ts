@@ -11,8 +11,9 @@ interface ITicTacToe {
     turn: Player;
     isStarted: boolean;
     withAI: boolean;
+    gameTileElement: NodeListOf<HTMLElement>;
 
-    start(): void;
+    start(gameTileElement: NodeListOf<HTMLElement>): void;
     reset(): void;
     claim(index: number): void;
     winChecker(): void;
