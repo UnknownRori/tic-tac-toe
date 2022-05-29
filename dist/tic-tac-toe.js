@@ -864,7 +864,8 @@ startGameButton.addEventListener('click', () => {
         alert("Minimum Tile to win cannot exceed map size");
         return;
     }
-    if ((mapSize * mapSize) < ((minStreak * mapSize))) {
+    const minStreakThreshold = Math.floor(((mapSize * mapSize) / 2) / minTile);
+    if (minStreak > minStreakThreshold) {
         alert("Minimum streak cannot pass threshold");
         return;
     }
