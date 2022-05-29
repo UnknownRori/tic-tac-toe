@@ -14,6 +14,11 @@ class TicTacToe implements ITicTacToe {
     public gameTileElement: NodeListOf<HTMLElement>;
     public currentPlayerDisplay: HTMLElement
 
+    private winStreakRecord = {
+        X: 0,
+        O: 0
+    }
+
     constructor(gameTileElement: NodeListOf<HTMLElement>, currentPlayerDisplay: HTMLElement) {
         this.gameTileElement = gameTileElement;
         this.currentPlayerDisplay = currentPlayerDisplay;
@@ -40,6 +45,10 @@ class TicTacToe implements ITicTacToe {
         this.mapSize = 3;
         this.minTile = 3;
         this.minStreak = 3;
+        this.winStreakRecord = {
+            X: 0,
+            O: 0
+        }
     }
 
     /**
@@ -51,7 +60,7 @@ class TicTacToe implements ITicTacToe {
             this.tile[index] = this.turn;
         }
 
-        this.winChecker();
+        this.winChecker(index);
 
         if (this.turn == "O") {
             this.turn = "X";
@@ -66,15 +75,74 @@ class TicTacToe implements ITicTacToe {
      * Check the all tile for the winner
      * @return void
      */
-    public winChecker(): void {
+    public winChecker(index: number): void {
+
         if (this.tile.every(element => element !== null)) {
             alert('Draw!');
         }
     }
 
+    private up(currentIndex: number) {
+        const calc = currentIndex - this.mapSize;
+        if (calc > this.mapSize || calc < 0) return false;
+        return calc;
+    }
 
-    private generateTile() {
-        // Generate array tile to track changes
+    private upRight(currentIndex: number) {
+        const calc = currentIndex - (this.mapSize - 1);
+        if (calc > this.mapSize || calc < 0) return false;
+        return calc;
+    }
+
+    private right(currentIndex: number) {
+        const calc = currentIndex + 1;
+        if (calc > this.mapSize || calc < 0) return false;
+        return calc;
+    }
+
+    private rightBottom(currentIndex: number) {
+        const calc = currentIndex + (this.mapSize + 1);
+        if (calc > this.mapSize || calc < 0) return false;
+        return calc;
+    }
+
+    private bottom(currentIndex: number) {
+        const calc = currentIndex + this.mapSize;
+        if (calc > this.mapSize || calc < 0) return false;
+        return calc;
+    }
+
+    private leftBottom(currentIndex: number) {
+        const calc = currentIndex + (this.mapSize - 1);
+        if (calc > this.mapSize || calc < 0) return false;
+        return calc;
+    }
+
+    private left(currentIndex: number) {
+        const calc = currentIndex + 1;
+        if (calc > this.mapSize || calc < 0) return false;
+        return calc;
+    }
+
+    private leftUp(currentIndex: number) {
+        const calc = currentIndex + (this.mapSize + 1);
+        if (calc > this.mapSize || calc < 0) return false;
+        return calc;
+    }
+
+    /**
+     * Add win streak correspond with current turn
+     * @return void
+     */
+    private addWinStreak(): void {
+        this.winStreakRecord[this.turn]++;
+    }
+
+    /**
+     * Generate array tile to track some changes
+     * @return void
+     */
+    private generateTile(): void {
         this.tile = Array(this.mapSize * this.mapSize).fill(null);
     }
 }

@@ -17,7 +17,7 @@ interface ITicTacToe {
     start(gameTileElement: NodeListOf<HTMLElement>): void;
     reset(): void;
     claim(index: number): void;
-    winChecker(): void;
+    winChecker(index: number): void;
 }
 
 export default ITicTacToe;
