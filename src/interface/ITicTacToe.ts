@@ -14,7 +14,7 @@ interface ITicTacToe {
 
     start(): void;
     reset(): void;
-    claim(): void;
+    claim(index: number): void;
     winChecker(): void;
 }
 

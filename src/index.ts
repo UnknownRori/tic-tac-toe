@@ -1,7 +1,11 @@
 import TicTacToe from "./core/TicTacToe";
 import "./asset/scss/style.scss";
+import createTile from "./helpers/createTile";
 
-const game = new TicTacToe();
+const gameTileID = 'gameElement';
+const gameTileDataSet = 'tile';
+
+const gameElement = <HTMLElement>document.querySelector('#game');
 
 // Main Game UI
 const mapSizeElement = <HTMLInputElement>document.querySelector('#mapSize');
@@ -16,6 +20,8 @@ const resetGameMenuUIElement = <HTMLElement>document.querySelector('#reset');
 // Button
 const startGameButton = <HTMLButtonElement>document.querySelector('#startGame');
 const resetGameButton = <HTMLButtonElement>document.querySelector('#resetGame');
+
+const game = new TicTacToe();
 
 startGameButton.addEventListener('click', () => {
     const mapSize = parseInt(mapSizeElement.value);
@@ -35,13 +41,24 @@ startGameButton.addEventListener('click', () => {
     game.minTile = minTile;
     game.minStreak = minStreak;
 
+    createTile(mapSize, gameElement, gameTileID, gameTileDataSet);
+    const gameTileElement = document.querySelectorAll(`#${gameTileID}`) as NodeListOf<HTMLElement>;
+
     game.start();
+
+    gameTileElement.forEach((element) => {
+        element.addEventListener('click', () => {
+            const index = parseInt(<string>element.dataset[gameTileDataSet])
+            game.claim(index);
+        })
+    })
 });
 
 resetGameButton.addEventListener('click', () => {
     mainUIElement.classList.add('bg-ui');
     newGameMenuUIElement.classList.remove('hidden');
     resetGameMenuUIElement.classList.add('hidden');
+    gameElement.innerHTML = '';
 
     game.reset();
 });

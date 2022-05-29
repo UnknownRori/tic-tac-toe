@@ -17,10 +17,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
 /* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _node_modules_css_loader_dist_cjs_js_utility_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! -!../../../node_modules/css-loader/dist/cjs.js!./utility.scss */ "./node_modules/css-loader/dist/cjs.js!./src/asset/scss/utility.scss");
-/* harmony import */ var _node_modules_css_loader_dist_cjs_js_components_form_component_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! -!../../../node_modules/css-loader/dist/cjs.js!./components/form-component.scss */ "./node_modules/css-loader/dist/cjs.js!./src/asset/scss/components/form-component.scss");
-/* harmony import */ var _node_modules_css_loader_dist_cjs_js_components_background_scss__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! -!../../../node_modules/css-loader/dist/cjs.js!./components/background.scss */ "./node_modules/css-loader/dist/cjs.js!./src/asset/scss/components/background.scss");
-/* harmony import */ var _node_modules_css_loader_dist_cjs_js_components_tile_scss__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! -!../../../node_modules/css-loader/dist/cjs.js!./components/tile.scss */ "./node_modules/css-loader/dist/cjs.js!./src/asset/scss/components/tile.scss");
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_components_button_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! -!../../../node_modules/css-loader/dist/cjs.js!./components/button.scss */ "./node_modules/css-loader/dist/cjs.js!./src/asset/scss/components/button.scss");
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_components_form_component_scss__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! -!../../../node_modules/css-loader/dist/cjs.js!./components/form-component.scss */ "./node_modules/css-loader/dist/cjs.js!./src/asset/scss/components/form-component.scss");
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_components_background_scss__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! -!../../../node_modules/css-loader/dist/cjs.js!./components/background.scss */ "./node_modules/css-loader/dist/cjs.js!./src/asset/scss/components/background.scss");
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_components_tile_scss__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! -!../../../node_modules/css-loader/dist/cjs.js!./components/tile.scss */ "./node_modules/css-loader/dist/cjs.js!./src/asset/scss/components/tile.scss");
 // Imports
+
 
 
 
@@ -29,11 +31,12 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 ___CSS_LOADER_EXPORT___.i(_node_modules_css_loader_dist_cjs_js_utility_scss__WEBPACK_IMPORTED_MODULE_2__["default"]);
-___CSS_LOADER_EXPORT___.i(_node_modules_css_loader_dist_cjs_js_components_form_component_scss__WEBPACK_IMPORTED_MODULE_3__["default"]);
-___CSS_LOADER_EXPORT___.i(_node_modules_css_loader_dist_cjs_js_components_background_scss__WEBPACK_IMPORTED_MODULE_4__["default"]);
-___CSS_LOADER_EXPORT___.i(_node_modules_css_loader_dist_cjs_js_components_tile_scss__WEBPACK_IMPORTED_MODULE_5__["default"]);
+___CSS_LOADER_EXPORT___.i(_node_modules_css_loader_dist_cjs_js_components_button_scss__WEBPACK_IMPORTED_MODULE_3__["default"]);
+___CSS_LOADER_EXPORT___.i(_node_modules_css_loader_dist_cjs_js_components_form_component_scss__WEBPACK_IMPORTED_MODULE_4__["default"]);
+___CSS_LOADER_EXPORT___.i(_node_modules_css_loader_dist_cjs_js_components_background_scss__WEBPACK_IMPORTED_MODULE_5__["default"]);
+___CSS_LOADER_EXPORT___.i(_node_modules_css_loader_dist_cjs_js_components_tile_scss__WEBPACK_IMPORTED_MODULE_6__["default"]);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "* {\n  margin: 0;\n  padding: 0;\n  box-sizing: border-box;\n}", "",{"version":3,"sources":["webpack://./src/asset/scss/style.scss"],"names":[],"mappings":"AAMA;EACI,SAAA;EACA,UAAA;EACA,sBAAA;AADJ","sourcesContent":["// Import\r\n@import url(./utility.scss);\r\n@import url(./components/form-component.scss);\r\n@import url(./components/background.scss);\r\n@import url(./components/tile.scss);\r\n\r\n* {\r\n    margin: 0;\r\n    padding: 0;\r\n    box-sizing: border-box;\r\n}\r\n"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, "* {\n  margin: 0;\n  padding: 0;\n  box-sizing: border-box;\n}", "",{"version":3,"sources":["webpack://./src/asset/scss/style.scss"],"names":[],"mappings":"AAOA;EACI,SAAA;EACA,UAAA;EACA,sBAAA;AADJ","sourcesContent":["// Import\r\n@import url(./utility.scss);\r\n@import url(./components/button.scss);\r\n@import url(./components/form-component.scss);\r\n@import url(./components/background.scss);\r\n@import url(./components/tile.scss);\r\n\r\n* {\r\n    margin: 0;\r\n    padding: 0;\r\n    box-sizing: border-box;\r\n}\r\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -71,6 +74,32 @@ ___CSS_LOADER_EXPORT___.push([module.id, ".background {\r\n    background-image:
 
 /***/ }),
 
+/***/ "./node_modules/css-loader/dist/cjs.js!./src/asset/scss/components/button.scss":
+/*!*************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js!./src/asset/scss/components/button.scss ***!
+  \*************************************************************************************/
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../../node_modules/css-loader/dist/runtime/sourceMaps.js */ "./node_modules/css-loader/dist/runtime/sourceMaps.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
+// Imports
+
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, ".primary-button {\r\n    font-size: large;\r\n    color: white;\r\n    background-color: rgb(72, 72, 204);\r\n    border: 1px solid gray;\r\n    border-radius: 8px;\r\n    padding: 8px;\r\n    transition: 250ms;\r\n}\r\n\r\n.primary-button:hover {\r\n    background-color: rgb(52, 52, 224);\r\n}", "",{"version":3,"sources":["webpack://./src/asset/scss/components/button.scss"],"names":[],"mappings":"AAAA;IACI,gBAAgB;IAChB,YAAY;IACZ,kCAAkC;IAClC,sBAAsB;IACtB,kBAAkB;IAClB,YAAY;IACZ,iBAAiB;AACrB;;AAEA;IACI,kCAAkC;AACtC","sourcesContent":[".primary-button {\r\n    font-size: large;\r\n    color: white;\r\n    background-color: rgb(72, 72, 204);\r\n    border: 1px solid gray;\r\n    border-radius: 8px;\r\n    padding: 8px;\r\n    transition: 250ms;\r\n}\r\n\r\n.primary-button:hover {\r\n    background-color: rgb(52, 52, 224);\r\n}"],"sourceRoot":""}]);
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
 /***/ "./node_modules/css-loader/dist/cjs.js!./src/asset/scss/components/form-component.scss":
 /*!*********************************************************************************************!*\
   !*** ./node_modules/css-loader/dist/cjs.js!./src/asset/scss/components/form-component.scss ***!
@@ -90,7 +119,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".form-control {\r\n    display: flex;\r\n    flex-direction: column;\r\n    margin-top: 2px;\r\n    margin-bottom: 2px;\r\n}\r\n\r\n.form-control>input {\r\n    padding: 4px;\r\n    border-radius: .25rem;\r\n    border: 0.5px solid gray;\r\n}\r\n\r\n.form-control>input:focus {\r\n    border: 1px solid black;\r\n}\r\n\r\n.form-control>button {\r\n    font-size: large;\r\n    color: white;\r\n    background-color: rgb(72, 72, 204);\r\n    border: 1px solid gray;\r\n    border-radius: 8px;\r\n    padding: 8px;\r\n    transition: 250ms;\r\n}\r\n\r\n.form-control>button:hover {\r\n    background-color: rgb(52, 52, 224);\r\n}", "",{"version":3,"sources":["webpack://./src/asset/scss/components/form-component.scss"],"names":[],"mappings":"AAAA;IACI,aAAa;IACb,sBAAsB;IACtB,eAAe;IACf,kBAAkB;AACtB;;AAEA;IACI,YAAY;IACZ,qBAAqB;IACrB,wBAAwB;AAC5B;;AAEA;IACI,uBAAuB;AAC3B;;AAEA;IACI,gBAAgB;IAChB,YAAY;IACZ,kCAAkC;IAClC,sBAAsB;IACtB,kBAAkB;IAClB,YAAY;IACZ,iBAAiB;AACrB;;AAEA;IACI,kCAAkC;AACtC","sourcesContent":[".form-control {\r\n    display: flex;\r\n    flex-direction: column;\r\n    margin-top: 2px;\r\n    margin-bottom: 2px;\r\n}\r\n\r\n.form-control>input {\r\n    padding: 4px;\r\n    border-radius: .25rem;\r\n    border: 0.5px solid gray;\r\n}\r\n\r\n.form-control>input:focus {\r\n    border: 1px solid black;\r\n}\r\n\r\n.form-control>button {\r\n    font-size: large;\r\n    color: white;\r\n    background-color: rgb(72, 72, 204);\r\n    border: 1px solid gray;\r\n    border-radius: 8px;\r\n    padding: 8px;\r\n    transition: 250ms;\r\n}\r\n\r\n.form-control>button:hover {\r\n    background-color: rgb(52, 52, 224);\r\n}"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, ".form-control {\r\n    display: flex;\r\n    flex-direction: column;\r\n    margin-top: 2px;\r\n    margin-bottom: 2px;\r\n}\r\n\r\n.form-control>input {\r\n    padding: 4px;\r\n    border-radius: .25rem;\r\n    border: 0.5px solid gray;\r\n}\r\n\r\n.form-control>input:focus {\r\n    border: 1px solid black;\r\n}\r\n", "",{"version":3,"sources":["webpack://./src/asset/scss/components/form-component.scss"],"names":[],"mappings":"AAAA;IACI,aAAa;IACb,sBAAsB;IACtB,eAAe;IACf,kBAAkB;AACtB;;AAEA;IACI,YAAY;IACZ,qBAAqB;IACrB,wBAAwB;AAC5B;;AAEA;IACI,uBAAuB;AAC3B","sourcesContent":[".form-control {\r\n    display: flex;\r\n    flex-direction: column;\r\n    margin-top: 2px;\r\n    margin-bottom: 2px;\r\n}\r\n\r\n.form-control>input {\r\n    padding: 4px;\r\n    border-radius: .25rem;\r\n    border: 0.5px solid gray;\r\n}\r\n\r\n.form-control>input:focus {\r\n    border: 1px solid black;\r\n}\r\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -713,7 +742,7 @@ class TicTacToe {
      * @return void
      */
     start() {
-        //
+        this.generateTile();
     }
     /**
      * Reset current game enviroment
@@ -726,7 +755,7 @@ class TicTacToe {
      * Claim a tile using current player turn
      * @return void
      */
-    claim() {
+    claim(index) {
         //
     }
     /**
@@ -736,8 +765,43 @@ class TicTacToe {
     winChecker() {
         //
     }
+    generateTile() {
+        // Generate array tile to track changes
+        this.tile = Array(this.mapSize * this.mapSize).fill(null);
+    }
 }
 exports["default"] = TicTacToe;
+
+
+/***/ }),
+
+/***/ "./src/helpers/createTile.ts":
+/*!***********************************!*\
+  !*** ./src/helpers/createTile.ts ***!
+  \***********************************/
+/***/ ((__unused_webpack_module, exports) => {
+
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+const createTile = (size, parent, id, data) => {
+    let index = 0;
+    for (let y = 0; y < size; y++) {
+        const newDiv = document.createElement('div');
+        newDiv.classList.add('flex');
+        newDiv.classList.add('flex-row');
+        newDiv.classList.add('mx-auto');
+        for (let x = 0; x < size; x++) {
+            const newButton = document.createElement('button');
+            newButton.classList.add('tile');
+            newButton.setAttribute(`data-${data}`, index.toString());
+            newButton.id = id;
+            index++;
+            newDiv.appendChild(newButton);
+        }
+        parent.appendChild(newDiv);
+    }
+};
+exports["default"] = createTile;
 
 
 /***/ }),
@@ -755,8 +819,53 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 const TicTacToe_1 = __importDefault(__webpack_require__(/*! ./core/TicTacToe */ "./src/core/TicTacToe.ts"));
 __webpack_require__(/*! ./asset/scss/style.scss */ "./src/asset/scss/style.scss");
+const createTile_1 = __importDefault(__webpack_require__(/*! ./helpers/createTile */ "./src/helpers/createTile.ts"));
+const gameTileID = 'gameElement';
+const gameTileDataSet = 'tile';
+const gameElement = document.querySelector('#game');
+// Main Game UI
+const mapSizeElement = document.querySelector('#mapSize');
+const minTileElement = document.querySelector('#minTile');
+const winStreakElement = document.querySelector('#winStreak');
+// Main UI
+const mainUIElement = document.querySelector('#ui');
+const newGameMenuUIElement = document.querySelector('#new');
+const resetGameMenuUIElement = document.querySelector('#reset');
+// Button
+const startGameButton = document.querySelector('#startGame');
+const resetGameButton = document.querySelector('#resetGame');
 const game = new TicTacToe_1.default();
-game.start();
+startGameButton.addEventListener('click', () => {
+    const mapSize = parseInt(mapSizeElement.value);
+    const minTile = parseInt(minTileElement.value);
+    const minStreak = parseInt(winStreakElement.value);
+    if (mapSize < 1 || minTile < 2 || minStreak < 1) {
+        alert("Please enter above 1");
+        return;
+    }
+    mainUIElement.classList.remove('bg-ui');
+    newGameMenuUIElement.classList.add('hidden');
+    resetGameMenuUIElement.classList.remove('hidden');
+    game.mapSize = mapSize;
+    game.minTile = minTile;
+    game.minStreak = minStreak;
+    (0, createTile_1.default)(mapSize, gameElement, gameTileID, gameTileDataSet);
+    const gameTileElement = document.querySelectorAll(`#${gameTileID}`);
+    game.start();
+    gameTileElement.forEach((element) => {
+        element.addEventListener('click', () => {
+            const index = parseInt(element.dataset[gameTileDataSet]);
+            game.claim(index);
+        });
+    });
+});
+resetGameButton.addEventListener('click', () => {
+    mainUIElement.classList.add('bg-ui');
+    newGameMenuUIElement.classList.remove('hidden');
+    resetGameMenuUIElement.classList.add('hidden');
+    gameElement.innerHTML = '';
+    game.reset();
+});
 
 
 /***/ }),

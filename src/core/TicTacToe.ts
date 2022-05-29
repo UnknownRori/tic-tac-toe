@@ -17,7 +17,7 @@ class TicTacToe implements ITicTacToe {
      * @return void
      */
     public start(): void {
-        //
+        this.generateTile();
     }
 
     /**
@@ -32,7 +32,7 @@ class TicTacToe implements ITicTacToe {
      * Claim a tile using current player turn
      * @return void
      */
-    public claim(): void {
+    public claim(index: number): void {
         //
     }
 
@@ -42,6 +42,12 @@ class TicTacToe implements ITicTacToe {
      */
     public winChecker(): void {
         //
+    }
+
+
+    private generateTile() {
+        // Generate array tile to track changes
+        this.tile = Array(this.mapSize * this.mapSize).fill(null);
     }
 }
 
