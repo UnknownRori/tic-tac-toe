@@ -12,9 +12,13 @@ class TicTacToe implements ITicTacToe {
     public isStarted = false;
     public withAI = false;
     public gameTileElement: NodeListOf<HTMLElement>;
+    public currentPlayerDisplay: HTMLElement
 
-    constructor(gameTileElement: NodeListOf<HTMLElement>) {
+    constructor(gameTileElement: NodeListOf<HTMLElement>, currentPlayerDisplay: HTMLElement) {
         this.gameTileElement = gameTileElement;
+        this.currentPlayerDisplay = currentPlayerDisplay;
+
+        this.currentPlayerDisplay.textContent = this.turn;
     }
 
     /**
@@ -44,6 +48,8 @@ class TicTacToe implements ITicTacToe {
         } else {
             this.turn = "O";
         }
+
+        this.currentPlayerDisplay.textContent = this.turn;
     }
 
     /**

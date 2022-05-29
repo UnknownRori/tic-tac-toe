@@ -13,6 +13,7 @@ let gameTileElement = document.querySelectorAll(`#${gameTileID}`) as NodeListOf<
 const mapSizeElement = <HTMLInputElement>document.querySelector('#mapSize');
 const minTileElement = <HTMLInputElement>document.querySelector('#minTile');
 const winStreakElement = <HTMLInputElement>document.querySelector('#winStreak');
+const currentPlayerDisplay = <HTMLElement>document.querySelector('#currentPlayer');
 
 // Main UI
 const mainUIElement = <HTMLElement>document.querySelector('#ui');
@@ -23,7 +24,7 @@ const resetGameMenuUIElement = <HTMLElement>document.querySelector('#reset');
 const startGameButton = <HTMLButtonElement>document.querySelector('#startGame');
 const resetGameButton = <HTMLButtonElement>document.querySelector('#resetGame');
 
-const game = new TicTacToe(gameTileElement);
+const game = new TicTacToe(gameTileElement, currentPlayerDisplay);
 
 startGameButton.addEventListener('click', () => {
     // Parse the map, min tile, min streak value.

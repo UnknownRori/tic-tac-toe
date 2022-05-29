@@ -15,8 +15,14 @@
         <div class='background'></div>
 
         <section id='ui' class='bg-ui fixed'>
-            <section id='reset' class='hidden'>
-                <button id='resetGame' class='primary-button'>Reset</button>
+            <section id='reset' class='hidden flex flex-row w-screen-full'>
+                <div class='text-white'>
+                    <h2>
+                        <span>Player : </span>
+                        <span id='currentPlayer'>O</span>
+                    </h2>
+                </div>
+                <button id='resetGame' class='primary-button ml-auto'>Reset</button>
             </section>
 
             <section id='new' class='w-screen-full h-screen-full flex flex-col justify-center'>

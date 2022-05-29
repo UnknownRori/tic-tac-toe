@@ -37,7 +37,7 @@ ___CSS_LOADER_EXPORT___.i(_node_modules_css_loader_dist_cjs_js_components_backgr
 ___CSS_LOADER_EXPORT___.i(_node_modules_css_loader_dist_cjs_js_components_tile_scss__WEBPACK_IMPORTED_MODULE_6__["default"]);
 ___CSS_LOADER_EXPORT___.push([module.id, "@import url(https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500&display=swap);"]);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "* {\n  margin: 0;\n  padding: 0;\n  box-sizing: border-box;\n  font-family: \"Fira Code\", monospace, sans-serif;\n}", "",{"version":3,"sources":["webpack://./src/asset/scss/style.scss"],"names":[],"mappings":"AASA;EACI,SAAA;EACA,UAAA;EACA,sBAAA;EACA,+CAAA;AAFJ","sourcesContent":["// Import\r\n@import url(./utility.scss);\r\n@import url(./components/button.scss);\r\n@import url(./components/form-component.scss);\r\n@import url(./components/background.scss);\r\n@import url(./components/tile.scss);\r\n\r\n@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500&display=swap');\r\n\r\n* {\r\n    margin: 0;\r\n    padding: 0;\r\n    box-sizing: border-box;\r\n    font-family: \"Fira Code\", monospace, sans-serif;\r\n}\r\n"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, "* {\n  margin: 0;\n  padding: 0;\n  box-sizing: border-box;\n  font-family: \"Fira Code\", monospace, sans-serif;\n}\n\n:root {\n  --scroll-opacity: 0.50;\n  scrollbar-color: rgba(221, 221, 221, var(--scroll-opacity)) rgba(58, 58, 58, var(--scroll-scroll-opacity)) !important;\n  scrollbar-width: thin !important;\n}\n\n::-webkit-scrollbar {\n  width: 6px;\n}\n\n::-webkit-scrollbar-track {\n  background: rgba(221, 221, 221, var(--scroll-opacity));\n}\n\n::-webkit-scrollbar-thumb {\n  background: rgba(46, 54, 69, var(--scroll-opacity));\n}\n\n::-webkit-scrollbar-thumb:hover {\n  background: rgba(58, 58, 58, var(--scroll-opacity));\n}", "",{"version":3,"sources":["webpack://./src/asset/scss/style.scss"],"names":[],"mappings":"AASA;EACI,SAAA;EACA,UAAA;EACA,sBAAA;EACA,+CAAA;AAFJ;;AAOA;EACI,sBAAA;EAEA,qHAAA;EACA,gCAAA;AALJ;;AAQA;EACI,UAAA;AALJ;;AAQA;EACI,sDAAA;AALJ;;AAQA;EACI,mDAAA;AALJ;;AAQA;EACI,mDAAA;AALJ","sourcesContent":["// Import\r\n@import url(./utility.scss);\r\n@import url(./components/button.scss);\r\n@import url(./components/form-component.scss);\r\n@import url(./components/background.scss);\r\n@import url(./components/tile.scss);\r\n\r\n@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500&display=swap');\r\n\r\n* {\r\n    margin: 0;\r\n    padding: 0;\r\n    box-sizing: border-box;\r\n    font-family: \"Fira Code\", monospace, sans-serif;\r\n}\r\n\r\n// Copied from UnknownRori-Firebase-Source-Code\r\n\r\n:root {\r\n    --scroll-opacity: 0.50;\r\n\r\n    scrollbar-color: rgba(221, 221, 221, var(--scroll-opacity)) rgba(58, 58, 58, var(--scroll-scroll-opacity)) !important;\r\n    scrollbar-width: thin !important;\r\n}\r\n\r\n::-webkit-scrollbar {\r\n    width: 6px;\r\n}\r\n\r\n::-webkit-scrollbar-track {\r\n    background: rgba(221, 221, 221, var(--scroll-opacity));\r\n}\r\n\r\n::-webkit-scrollbar-thumb {\r\n    background: rgba(46, 54, 69, var(--scroll-opacity));\r\n}\r\n\r\n::-webkit-scrollbar-thumb:hover {\r\n    background: rgba(58, 58, 58, var(--scroll-opacity));\r\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -172,7 +172,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".w-screen-full {\r\n    width: 100vw;\r\n}\r\n\r\n.h-screen-full {\r\n    height: 100vh;\r\n}\r\n\r\n.fixed {\r\n    position: fixed;\r\n}\r\n\r\n.rounded {\r\n    border-radius: 0.25rem;\r\n}\r\n\r\n.flex {\r\n    display: flex;\r\n}\r\n\r\n.flex-row {\r\n    flex-direction: row;\r\n}\r\n\r\n.flex-col {\r\n    flex-direction: column;\r\n}\r\n\r\n.justify-center {\r\n    justify-content: center;\r\n}\r\n\r\n.p-8 {\r\n    padding: 8px;\r\n}\r\n\r\n.m-auto {\r\n    margin: auto;\r\n}\r\n\r\n.my-auto {\r\n    margin-top: auto;\r\n    margin-bottom: auto;\r\n}\r\n\r\n.my-2 {\r\n    margin-top: 2px;\r\n    margin-bottom: 2px;\r\n}\r\n\r\n.mx-auto {\r\n    margin-left: auto;\r\n    margin-right: auto;\r\n}\r\n\r\n.text-white {\r\n    color: white;\r\n}\r\n\r\n.text-center {\r\n    text-align: center;\r\n}\r\n\r\n.hidden {\r\n    display: none;\r\n}\r\n\r\n.w-30 {\r\n    width: 30%;\r\n}", "",{"version":3,"sources":["webpack://./src/asset/scss/utility.scss"],"names":[],"mappings":"AAAA;IACI,YAAY;AAChB;;AAEA;IACI,aAAa;AACjB;;AAEA;IACI,eAAe;AACnB;;AAEA;IACI,sBAAsB;AAC1B;;AAEA;IACI,aAAa;AACjB;;AAEA;IACI,mBAAmB;AACvB;;AAEA;IACI,sBAAsB;AAC1B;;AAEA;IACI,uBAAuB;AAC3B;;AAEA;IACI,YAAY;AAChB;;AAEA;IACI,YAAY;AAChB;;AAEA;IACI,gBAAgB;IAChB,mBAAmB;AACvB;;AAEA;IACI,eAAe;IACf,kBAAkB;AACtB;;AAEA;IACI,iBAAiB;IACjB,kBAAkB;AACtB;;AAEA;IACI,YAAY;AAChB;;AAEA;IACI,kBAAkB;AACtB;;AAEA;IACI,aAAa;AACjB;;AAEA;IACI,UAAU;AACd","sourcesContent":[".w-screen-full {\r\n    width: 100vw;\r\n}\r\n\r\n.h-screen-full {\r\n    height: 100vh;\r\n}\r\n\r\n.fixed {\r\n    position: fixed;\r\n}\r\n\r\n.rounded {\r\n    border-radius: 0.25rem;\r\n}\r\n\r\n.flex {\r\n    display: flex;\r\n}\r\n\r\n.flex-row {\r\n    flex-direction: row;\r\n}\r\n\r\n.flex-col {\r\n    flex-direction: column;\r\n}\r\n\r\n.justify-center {\r\n    justify-content: center;\r\n}\r\n\r\n.p-8 {\r\n    padding: 8px;\r\n}\r\n\r\n.m-auto {\r\n    margin: auto;\r\n}\r\n\r\n.my-auto {\r\n    margin-top: auto;\r\n    margin-bottom: auto;\r\n}\r\n\r\n.my-2 {\r\n    margin-top: 2px;\r\n    margin-bottom: 2px;\r\n}\r\n\r\n.mx-auto {\r\n    margin-left: auto;\r\n    margin-right: auto;\r\n}\r\n\r\n.text-white {\r\n    color: white;\r\n}\r\n\r\n.text-center {\r\n    text-align: center;\r\n}\r\n\r\n.hidden {\r\n    display: none;\r\n}\r\n\r\n.w-30 {\r\n    width: 30%;\r\n}"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, ".w-screen-full {\r\n    width: 100vw;\r\n}\r\n\r\n.h-screen-full {\r\n    height: 100vh;\r\n}\r\n\r\n.fixed {\r\n    position: fixed;\r\n}\r\n\r\n.rounded {\r\n    border-radius: 0.25rem;\r\n}\r\n\r\n.flex {\r\n    display: flex;\r\n}\r\n\r\n.flex-row {\r\n    flex-direction: row;\r\n}\r\n\r\n.flex-col {\r\n    flex-direction: column;\r\n}\r\n\r\n.justify-center {\r\n    justify-content: center;\r\n}\r\n\r\n.p-8 {\r\n    padding: 8px;\r\n}\r\n\r\n.m-auto {\r\n    margin: auto;\r\n}\r\n\r\n.my-auto {\r\n    margin-top: auto;\r\n    margin-bottom: auto;\r\n}\r\n\r\n.my-2 {\r\n    margin-top: 2px;\r\n    margin-bottom: 2px;\r\n}\r\n\r\n.mx-auto {\r\n    margin-left: auto;\r\n    margin-right: auto;\r\n}\r\n\r\n.ml-auto {\r\n    margin-left: auto;\r\n}\r\n\r\n.text-white {\r\n    color: white;\r\n}\r\n\r\n.text-center {\r\n    text-align: center;\r\n}\r\n\r\n.hidden {\r\n    display: none;\r\n}\r\n\r\n.w-30 {\r\n    width: 30%;\r\n}", "",{"version":3,"sources":["webpack://./src/asset/scss/utility.scss"],"names":[],"mappings":"AAAA;IACI,YAAY;AAChB;;AAEA;IACI,aAAa;AACjB;;AAEA;IACI,eAAe;AACnB;;AAEA;IACI,sBAAsB;AAC1B;;AAEA;IACI,aAAa;AACjB;;AAEA;IACI,mBAAmB;AACvB;;AAEA;IACI,sBAAsB;AAC1B;;AAEA;IACI,uBAAuB;AAC3B;;AAEA;IACI,YAAY;AAChB;;AAEA;IACI,YAAY;AAChB;;AAEA;IACI,gBAAgB;IAChB,mBAAmB;AACvB;;AAEA;IACI,eAAe;IACf,kBAAkB;AACtB;;AAEA;IACI,iBAAiB;IACjB,kBAAkB;AACtB;;AAEA;IACI,iBAAiB;AACrB;;AAEA;IACI,YAAY;AAChB;;AAEA;IACI,kBAAkB;AACtB;;AAEA;IACI,aAAa;AACjB;;AAEA;IACI,UAAU;AACd","sourcesContent":[".w-screen-full {\r\n    width: 100vw;\r\n}\r\n\r\n.h-screen-full {\r\n    height: 100vh;\r\n}\r\n\r\n.fixed {\r\n    position: fixed;\r\n}\r\n\r\n.rounded {\r\n    border-radius: 0.25rem;\r\n}\r\n\r\n.flex {\r\n    display: flex;\r\n}\r\n\r\n.flex-row {\r\n    flex-direction: row;\r\n}\r\n\r\n.flex-col {\r\n    flex-direction: column;\r\n}\r\n\r\n.justify-center {\r\n    justify-content: center;\r\n}\r\n\r\n.p-8 {\r\n    padding: 8px;\r\n}\r\n\r\n.m-auto {\r\n    margin: auto;\r\n}\r\n\r\n.my-auto {\r\n    margin-top: auto;\r\n    margin-bottom: auto;\r\n}\r\n\r\n.my-2 {\r\n    margin-top: 2px;\r\n    margin-bottom: 2px;\r\n}\r\n\r\n.mx-auto {\r\n    margin-left: auto;\r\n    margin-right: auto;\r\n}\r\n\r\n.ml-auto {\r\n    margin-left: auto;\r\n}\r\n\r\n.text-white {\r\n    color: white;\r\n}\r\n\r\n.text-center {\r\n    text-align: center;\r\n}\r\n\r\n.hidden {\r\n    display: none;\r\n}\r\n\r\n.w-30 {\r\n    width: 30%;\r\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -728,7 +728,7 @@ module.exports = styleTagTransform;
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 class TicTacToe {
-    constructor() {
+    constructor(gameTileElement, currentPlayerDisplay) {
         // User generated rules
         this.mapSize = 3;
         this.minTile = 3;
@@ -737,12 +737,16 @@ class TicTacToe {
         this.turn = "X";
         this.isStarted = false;
         this.withAI = false;
+        this.gameTileElement = gameTileElement;
+        this.currentPlayerDisplay = currentPlayerDisplay;
+        this.currentPlayerDisplay.textContent = this.turn;
     }
     /**
      * Initialize the tic tac toe game
      * @return void
      */
-    start() {
+    start(gameTileElement) {
+        this.gameTileElement = gameTileElement;
         this.generateTile();
     }
     /**
@@ -763,6 +767,7 @@ class TicTacToe {
         else {
             this.turn = "O";
         }
+        this.currentPlayerDisplay.textContent = this.turn;
     }
     /**
      * Check the all tile for the winner
@@ -830,10 +835,12 @@ const createTile_1 = __importDefault(__webpack_require__(/*! ./helpers/createTil
 const gameTileID = 'gameElement';
 const gameTileDataSet = 'tile';
 const gameElement = document.querySelector('#game');
+let gameTileElement = document.querySelectorAll(`#${gameTileID}`);
 // Main Game UI
 const mapSizeElement = document.querySelector('#mapSize');
 const minTileElement = document.querySelector('#minTile');
 const winStreakElement = document.querySelector('#winStreak');
+const currentPlayerDisplay = document.querySelector('#currentPlayer');
 // Main UI
 const mainUIElement = document.querySelector('#ui');
 const newGameMenuUIElement = document.querySelector('#new');
@@ -841,7 +848,7 @@ const resetGameMenuUIElement = document.querySelector('#reset');
 // Button
 const startGameButton = document.querySelector('#startGame');
 const resetGameButton = document.querySelector('#resetGame');
-const game = new TicTacToe_1.default();
+const game = new TicTacToe_1.default(gameTileElement, currentPlayerDisplay);
 startGameButton.addEventListener('click', () => {
     // Parse the map, min tile, min streak value.
     const mapSize = parseInt(mapSizeElement.value);
@@ -862,9 +869,9 @@ startGameButton.addEventListener('click', () => {
     game.minStreak = minStreak;
     // Create the tile and put it in variable
     (0, createTile_1.default)(mapSize, gameElement, gameTileID, gameTileDataSet);
-    const gameTileElement = document.querySelectorAll(`#${gameTileID}`);
+    gameTileElement = document.querySelectorAll(`#${gameTileID}`);
     // Start the game and init the event listener
-    game.start();
+    game.start(gameTileElement);
     gameTileElement.forEach((element) => {
         element.addEventListener('click', () => {
             const index = parseInt(element.dataset[gameTileDataSet]);

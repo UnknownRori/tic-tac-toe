@@ -12,6 +12,7 @@ interface ITicTacToe {
     isStarted: boolean;
     withAI: boolean;
     gameTileElement: NodeListOf<HTMLElement>;
+    currentPlayerDisplay: HTMLElement;
 
     start(gameTileElement: NodeListOf<HTMLElement>): void;
     reset(): void;
