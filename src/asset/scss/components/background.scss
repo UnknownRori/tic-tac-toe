@@ -1,0 +1,19 @@
+.background {
+    background-image: url('../../background/background1.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: brightness(80%);
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    z-index: -10;
+}
+
+.bg-ui {
+    background-color: rgba(128, 128, 128, 0.712);
+}
+
+.bg-menu {
+    background-color: rgba(63, 60, 60, 0.76);
+}

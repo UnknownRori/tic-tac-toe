@@ -1,0 +1,11 @@
+// Import
+@import url(./utility.scss);
+@import url(./components/form-component.scss);
+@import url(./components/background.scss);
+@import url(./components/tile.scss);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}

@@ -11,6 +11,278 @@
 
     <body>
 
+        <div class='background'></div>
+
+        <section id='ui' class='bg-ui'>
+            <section id='new' class='w-screen-full h-screen-full flex flex-col justify-center hidden'>
+                <div class="m-auto bg-menu rounded">
+                    <h2 class='text-center text-white'>Tic Tac Toe</h2>
+                    <div class='form-control p-8 mx-auto'>
+                        <label for='mapSize' class='text-white'>Map Size</label>
+                        <input id='mapSize' name='mapSize' type="number" required>
+                    </div>
+                    <div class="form-control p-8 mx-auto text-center">
+                        <button id='start-game'>Start Game</button>
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        <section id='game' class='flex flex-col justify-center h-screen-full w-screen-full'>
+            <div class="flex flex-row mx-auto">
+                <button class='tile'></button>
+                <button class='tile'></button>
+                <button class='tile'></button>
+                <button class='tile'></button>
+                <button class='tile'></button>
+                <button class='tile'></button>
+                <button class='tile'></button>
+                <button class='tile'></button>
+                <button class='tile'></button>
+                <button class='tile'></button>
+                <button class='tile'></button>
+                <button class='tile'></button>
+                <button class='tile'></button>
+                <button class='tile'></button>
+                <button class='tile'></button>
+                <button class='tile'></button>
+            </div>
+            <div class="flex flex-row mx-auto">
+                <button class='tile'></button>
+                <button class='tile'></button>
+                <button class='tile'></button>
+                <button class='tile'></button>
+                <button class='tile'></button>
+                <button class='tile'></button>
+                <button class='tile'></button>
+                <button class='tile'></button>
+                <button class='tile'></button>
+                <button class='tile'></button>
+                <button class='tile'></button>
+                <button class='tile'></button>
+                <button class='tile'></button>
+                <button class='tile'></button>
+                <button class='tile'></button>
+                <button class='tile'></button>
+            </div>
+            <div class="flex flex-row mx-auto">
+                <button class='tile'></button>
+                <button class='tile'></button>
+                <button class='tile'></button>
+                <button class='tile'></button>
+                <button class='tile'></button>
+                <button class='tile'></button>
+                <button class='tile'></button>
+                <button class='tile'></button>
+                <button class='tile'></button>
+                <button class='tile'></button>
+                <button class='tile'></button>
+                <button class='tile'></button>
+                <button class='tile'></button>
+                <button class='tile'></button>
+                <button class='tile'></button>
+                <button class='tile'></button>
+            </div>
+            <div class="flex flex-row mx-auto">
+                <button class='tile'></button>
+                <button class='tile'></button>
+                <button class='tile'></button>
+                <button class='tile'></button>
+                <button class='tile'></button>
+                <button class='tile'></button>
+                <button class='tile'></button>
+                <button class='tile'></button>
+                <button class='tile'></button>
+                <button class='tile'></button>
+                <button class='tile'></button>
+                <button class='tile'></button>
+                <button class='tile'></button>
+                <button class='tile'></button>
+                <button class='tile'></button>
+                <button class='tile'></button>
+            </div>
+            <div class="flex flex-row mx-auto">
+                <button class='tile'></button>
+                <button class='tile'></button>
+                <button class='tile'></button>
+                <button class='tile'></button>
+                <button class='tile'></button>
+                <button class='tile'></button>
+                <button class='tile'></button>
+                <button class='tile'></button>
+                <button class='tile'></button>
+                <button class='tile'></button>
+                <button class='tile'></button>
+                <button class='tile'></button>
+                <button class='tile'></button>
+                <button class='tile'></button>
+                <button class='tile'></button>
+                <button class='tile'></button>
+            </div>
+            <div class="flex flex-row mx-auto">
+                <button class='tile'></button>
+                <button class='tile'></button>
+                <button class='tile'></button>
+                <button class='tile'></button>
+                <button class='tile'></button>
+                <button class='tile'></button>
+                <button class='tile'></button>
+                <button class='tile'></button>
+                <button class='tile'></button>
+                <button class='tile'></button>
+                <button class='tile'></button>
+                <button class='tile'></button>
+                <button class='tile'></button>
+                <button class='tile'></button>
+                <button class='tile'></button>
+                <button class='tile'></button>
+            </div>
+            <div class="flex flex-row mx-auto">
+                <button class='tile'></button>
+                <button class='tile'></button>
+                <button class='tile'></button>
+                <button class='tile'></button>
+                <button class='tile'></button>
+                <button class='tile'></button>
+                <button class='tile'></button>
+                <button class='tile'></button>
+                <button class='tile'></button>
+                <button class='tile'></button>
+                <button class='tile'></button>
+                <button class='tile'></button>
+                <button class='tile'></button>
+                <button class='tile'></button>
+                <button class='tile'></button>
+                <button class='tile'></button>
+            </div>
+            <div class="flex flex-row mx-auto">
+                <button class='tile'></button>
+                <button class='tile'></button>
+                <button class='tile'></button>
+                <button class='tile'></button>
+                <button class='tile'></button>
+                <button class='tile'></button>
+                <button class='tile'></button>
+                <button class='tile'></button>
+                <button class='tile'></button>
+                <button class='tile'></button>
+                <button class='tile'></button>
+                <button class='tile'></button>
+                <button class='tile'></button>
+                <button class='tile'></button>
+                <button class='tile'></button>
+                <button class='tile'></button>
+            </div>
+            <div class="flex flex-row mx-auto">
+                <button class='tile'></button>
+                <button class='tile'></button>
+                <button class='tile'></button>
+                <button class='tile'></button>
+                <button class='tile'></button>
+                <button class='tile'></button>
+                <button class='tile'></button>
+                <button class='tile'></button>
+                <button class='tile'></button>
+                <button class='tile'></button>
+                <button class='tile'></button>
+                <button class='tile'></button>
+                <button class='tile'></button>
+                <button class='tile'></button>
+                <button class='tile'></button>
+                <button class='tile'></button>
+            </div>
+            <div class="flex flex-row mx-auto">
+                <button class='tile'></button>
+                <button class='tile'></button>
+                <button class='tile'></button>
+                <button class='tile'></button>
+                <button class='tile'></button>
+                <button class='tile'></button>
+                <button class='tile'></button>
+                <button class='tile'></button>
+                <button class='tile'></button>
+                <button class='tile'></button>
+                <button class='tile'></button>
+                <button class='tile'></button>
+                <button class='tile'></button>
+                <button class='tile'></button>
+                <button class='tile'></button>
+                <button class='tile'></button>
+            </div>
+            <div class="flex flex-row mx-auto">
+                <button class='tile'></button>
+                <button class='tile'></button>
+                <button class='tile'></button>
+                <button class='tile'></button>
+                <button class='tile'></button>
+                <button class='tile'></button>
+                <button class='tile'></button>
+                <button class='tile'></button>
+                <button class='tile'></button>
+                <button class='tile'></button>
+                <button class='tile'></button>
+                <button class='tile'></button>
+                <button class='tile'></button>
+                <button class='tile'></button>
+                <button class='tile'></button>
+                <button class='tile'></button>
+            </div>
+            <div class="flex flex-row mx-auto">
+                <button class='tile'></button>
+                <button class='tile'></button>
+                <button class='tile'></button>
+                <button class='tile'></button>
+                <button class='tile'></button>
+                <button class='tile'></button>
+                <button class='tile'></button>
+                <button class='tile'></button>
+                <button class='tile'></button>
+                <button class='tile'></button>
+                <button class='tile'></button>
+                <button class='tile'></button>
+                <button class='tile'></button>
+                <button class='tile'></button>
+                <button class='tile'></button>
+                <button class='tile'></button>
+            </div>
+            <div class="flex flex-row mx-auto">
+                <button class='tile'></button>
+                <button class='tile'></button>
+                <button class='tile'></button>
+                <button class='tile'></button>
+                <button class='tile'></button>
+                <button class='tile'></button>
+                <button class='tile'></button>
+                <button class='tile'></button>
+                <button class='tile'></button>
+                <button class='tile'></button>
+                <button class='tile'></button>
+                <button class='tile'></button>
+                <button class='tile'></button>
+                <button class='tile'></button>
+                <button class='tile'></button>
+                <button class='tile'></button>
+            </div>
+            <div class="flex flex-row mx-auto">
+                <button class='tile'></button>
+                <button class='tile'></button>
+                <button class='tile'></button>
+                <button class='tile'></button>
+                <button class='tile'></button>
+                <button class='tile'></button>
+                <button class='tile'></button>
+                <button class='tile'></button>
+                <button class='tile'></button>
+                <button class='tile'></button>
+                <button class='tile'></button>
+                <button class='tile'></button>
+                <button class='tile'></button>
+                <button class='tile'></button>
+                <button class='tile'></button>
+                <button class='tile'></button>
+            </div>
+        </section>
+
     </body>
 
 </html>

@@ -1,0 +1,23 @@
+.form-control>input {
+    padding: 4px;
+    border-radius: .25rem;
+    border: 0.5px solid gray;
+}
+
+.form-control>input:focus {
+    border: 1px solid black;
+}
+
+.form-control>button {
+    font-size: large;
+    color: white;
+    background-color: rgb(72, 72, 204);
+    border: 1px solid gray;
+    border-radius: 8px;
+    padding: 8px;
+    transition: 250ms;
+}
+
+.form-control>button:hover {
+    background-color: rgb(52, 52, 224);
+}
