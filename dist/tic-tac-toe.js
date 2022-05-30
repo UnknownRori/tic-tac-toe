@@ -945,13 +945,15 @@ class TicTacToe {
         return calc;
     }
     upRight(currentIndex) {
+        if (!((currentIndex + 1) % this.mapSize))
+            return false;
         const calc = currentIndex - (this.mapSize - 1);
         if (calc > (this.mapSize * this.mapSize) || calc < 0)
             return false;
         return calc;
     }
     right(currentIndex) {
-        if (!!((currentIndex + 1) % this.mapSize))
+        if (!((currentIndex + 1) % this.mapSize))
             return false;
         const calc = currentIndex + 1;
         if (calc > (this.mapSize * this.mapSize) || calc < 0)
@@ -959,9 +961,12 @@ class TicTacToe {
         return calc;
     }
     bottomRight(currentIndex) {
+        if (!((currentIndex + 1) % this.mapSize))
+            return false;
         const calc = currentIndex + (this.mapSize + 1);
         if (calc > (this.mapSize * this.mapSize) || calc < 0)
             return false;
+        console.log(calc);
         return calc;
     }
     bottom(currentIndex) {
@@ -971,8 +976,10 @@ class TicTacToe {
         return calc;
     }
     bottomLeft(currentIndex) {
+        if (!(currentIndex % this.mapSize))
+            return false;
         const calc = currentIndex + (this.mapSize - 1);
-        if (calc > (this.mapSize * this.mapSize) || calc < 0)
+        if ((calc + 1) > (this.mapSize * this.mapSize) || calc < 0)
             return false;
         return calc;
     }
@@ -985,7 +992,9 @@ class TicTacToe {
         return calc;
     }
     upLeft(currentIndex) {
-        const calc = currentIndex + (this.mapSize - 1);
+        if (!(currentIndex % this.mapSize))
+            return false;
+        const calc = currentIndex - (this.mapSize + 1);
         if (calc > (this.mapSize * this.mapSize) || calc < 0)
             return false;
         return calc;

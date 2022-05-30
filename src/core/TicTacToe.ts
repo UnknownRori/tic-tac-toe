@@ -239,21 +239,24 @@ class TicTacToe implements ITicTacToe {
     }
 
     protected upRight(currentIndex: number) {
+        if (!((currentIndex + 1) % this.mapSize)) return false;
         const calc = currentIndex - (this.mapSize - 1);
         if (calc > (this.mapSize * this.mapSize) || calc < 0) return false;
         return calc;
     }
 
     protected right(currentIndex: number) {
-        if (!!((currentIndex + 1) % this.mapSize)) return false;
+        if (!((currentIndex + 1) % this.mapSize)) return false;
         const calc = currentIndex + 1;
         if (calc > (this.mapSize * this.mapSize) || calc < 0) return false;
         return calc;
     }
 
     protected bottomRight(currentIndex: number) {
+        if (!((currentIndex + 1) % this.mapSize)) return false;
         const calc = currentIndex + (this.mapSize + 1);
         if (calc > (this.mapSize * this.mapSize) || calc < 0) return false;
+        console.log(calc);
         return calc;
     }
 
@@ -264,8 +267,9 @@ class TicTacToe implements ITicTacToe {
     }
 
     protected bottomLeft(currentIndex: number) {
+        if (!(currentIndex % this.mapSize)) return false;
         const calc = currentIndex + (this.mapSize - 1);
-        if (calc > (this.mapSize * this.mapSize) || calc < 0) return false;
+        if ((calc + 1) > (this.mapSize * this.mapSize) || calc < 0) return false;
         return calc;
     }
 
@@ -277,7 +281,8 @@ class TicTacToe implements ITicTacToe {
     }
 
     protected upLeft(currentIndex: number) {
-        const calc = currentIndex + (this.mapSize - 1);
+        if (!(currentIndex % this.mapSize)) return false;
+        const calc = currentIndex - (this.mapSize + 1);
         if (calc > (this.mapSize * this.mapSize) || calc < 0) return false;
         return calc;
     }
