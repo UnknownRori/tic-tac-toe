@@ -32,6 +32,7 @@ class TicTacToe implements ITicTacToe {
      */
     public start(gameTileElement: NodeListOf<HTMLElement>): void {
         this.gameTileElement = gameTileElement;
+        this.isStarted = true;
         this.generateTile();
     }
 
@@ -40,6 +41,7 @@ class TicTacToe implements ITicTacToe {
      * @return void
      */
     public reset(): void {
+        this.isStarted = false;
         this.tile = [];
         this.turn = "X";
         this.mapSize = 3;
@@ -76,6 +78,8 @@ class TicTacToe implements ITicTacToe {
      * @return void
      */
     public winChecker(index: number): void {
+        if (this.isStarted == false) return;
+
         const streak = {
             up: 0,
             bottom: 0,
@@ -95,10 +99,20 @@ class TicTacToe implements ITicTacToe {
         streak.upLeft = this.checkUpLeft(index);
         streak.bottomLeft = this.checkBottomLeft(index);
         streak.bottomRight = this.checkBottomRight(index);
-        console.log(this.turn, streak);
 
-        if (this.tile.every(element => element !== null)) {
-            alert('Draw!');
+        Object.values(streak).forEach((val) => {
+            if (val == this.minTile) this.addWinStreak();
+        });
+
+        if (this.winStreakRecord[this.turn] == this.minStreak) {
+            alert(`Player ${this.turn} WIN!`);
+            this.reset();
+        }
+
+        if (this.isStarted) {
+            if (this.tile.every(element => element !== null)) {
+                alert('Draw!');
+            }
         }
     }
 

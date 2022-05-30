@@ -751,6 +751,7 @@ class TicTacToe {
      */
     start(gameTileElement) {
         this.gameTileElement = gameTileElement;
+        this.isStarted = true;
         this.generateTile();
     }
     /**
@@ -758,6 +759,7 @@ class TicTacToe {
      * @return void
      */
     reset() {
+        this.isStarted = false;
         this.tile = [];
         this.turn = "X";
         this.mapSize = 3;
@@ -790,6 +792,8 @@ class TicTacToe {
      * @return void
      */
     winChecker(index) {
+        if (this.isStarted == false)
+            return;
         const streak = {
             up: 0,
             bottom: 0,
@@ -808,9 +812,18 @@ class TicTacToe {
         streak.upLeft = this.checkUpLeft(index);
         streak.bottomLeft = this.checkBottomLeft(index);
         streak.bottomRight = this.checkBottomRight(index);
-        console.log(this.turn, streak);
-        if (this.tile.every(element => element !== null)) {
-            alert('Draw!');
+        Object.values(streak).forEach((val) => {
+            if (val == this.minTile)
+                this.addWinStreak();
+        });
+        if (this.winStreakRecord[this.turn] == this.minStreak) {
+            alert(`Player ${this.turn} WIN!`);
+            this.reset();
+        }
+        if (this.isStarted) {
+            if (this.tile.every(element => element !== null)) {
+                alert('Draw!');
+            }
         }
     }
     // Vertical Checker
@@ -818,6 +831,8 @@ class TicTacToe {
         if (this.tile[index] == this.turn) {
             const newIndex = this.up(index);
             streak++;
+            if (streak == this.minTile)
+                return streak;
             if (typeof newIndex != 'boolean') {
                 return this.checkUp(newIndex, streak);
             }
@@ -828,6 +843,8 @@ class TicTacToe {
         if (this.tile[index] == this.turn) {
             const newIndex = this.bottom(index);
             streak++;
+            if (streak == this.minTile)
+                return streak;
             if (typeof newIndex != 'boolean') {
                 return this.checkBottom(newIndex, streak);
             }
@@ -839,6 +856,8 @@ class TicTacToe {
         if (this.tile[index] == this.turn) {
             const newIndex = this.right(index);
             streak++;
+            if (streak == this.minTile)
+                return streak;
             if (typeof newIndex != 'boolean') {
                 return this.checkRight(newIndex, streak);
             }
@@ -849,6 +868,8 @@ class TicTacToe {
         if (this.tile[index] == this.turn) {
             const newIndex = this.left(index);
             streak++;
+            if (streak == this.minTile)
+                return streak;
             if (typeof newIndex != 'boolean') {
                 return this.checkLeft(newIndex, streak);
             }
@@ -860,6 +881,8 @@ class TicTacToe {
         if (this.tile[index] == this.turn) {
             const newIndex = this.upRight(index);
             streak++;
+            if (streak == this.minTile)
+                return streak;
             if (typeof newIndex != 'boolean') {
                 return this.checkUpRight(newIndex, streak);
             }
@@ -870,6 +893,8 @@ class TicTacToe {
         if (this.tile[index] == this.turn) {
             const newIndex = this.upLeft(index);
             streak++;
+            if (streak == this.minTile)
+                return streak;
             if (typeof newIndex != 'boolean') {
                 return this.checkUpLeft(newIndex, streak);
             }
@@ -880,6 +905,8 @@ class TicTacToe {
         if (this.tile[index] == this.turn) {
             const newIndex = this.bottomLeft(index);
             streak++;
+            if (streak == this.minTile)
+                return streak;
             if (typeof newIndex != 'boolean') {
                 return this.checkBottomLeft(newIndex, streak);
             }
@@ -890,6 +917,8 @@ class TicTacToe {
         if (this.tile[index] == this.turn) {
             const newIndex = this.bottomRight(index);
             streak++;
+            if (streak == this.minTile)
+                return streak;
             if (typeof newIndex != 'boolean') {
                 return this.checkBottomRight(newIndex, streak);
             }
