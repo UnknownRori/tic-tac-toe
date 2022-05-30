@@ -1020,6 +1020,9 @@ class TicTacToe {
             if (this.mapSize % 2) {
                 this.claim(Math.floor((this.mapSize * this.mapSize) / 2));
             }
+            else {
+                this.claim(Math.floor(Math.random() * (this.mapSize * this.mapSize)));
+            }
         }
     }
 }
