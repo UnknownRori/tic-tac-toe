@@ -799,7 +799,7 @@ class TicTacToe {
                 tile.textContent = this.tile[index];
             });
             if (this.withAI && this.isAITurn) {
-                this.aiMove();
+                this.aiMove(index);
             }
         }
     }
@@ -810,6 +810,22 @@ class TicTacToe {
     winChecker(index) {
         if (this.isStarted == false)
             return;
+        const streak = this.getStreak(index);
+        Object.values(streak).forEach((val) => {
+            if (val == this.minTile)
+                this.addWinStreak();
+        });
+        if (this.winStreakRecord[this.turn] == this.minStreak) {
+            alert(`Player ${this.turn} WIN!`);
+            this.reset();
+        }
+        if (this.isStarted) {
+            if (this.tile.every(element => element !== null)) {
+                alert('Draw!');
+            }
+        }
+    }
+    getStreak(index) {
         const streak = {
             up: 0,
             bottom: 0,
@@ -828,19 +844,7 @@ class TicTacToe {
         streak.upLeft = this.checkUpLeft(index);
         streak.bottomLeft = this.checkBottomLeft(index);
         streak.bottomRight = this.checkBottomRight(index);
-        Object.values(streak).forEach((val) => {
-            if (val == this.minTile)
-                this.addWinStreak();
-        });
-        if (this.winStreakRecord[this.turn] == this.minStreak) {
-            alert(`Player ${this.turn} WIN!`);
-            this.reset();
-        }
-        if (this.isStarted) {
-            if (this.tile.every(element => element !== null)) {
-                alert('Draw!');
-            }
-        }
+        return streak;
     }
     // Vertical Checker
     checkUp(index, streak = 0) {
@@ -1015,7 +1019,7 @@ class TicTacToe {
     generateTile() {
         this.tile = Array(this.mapSize * this.mapSize).fill(null);
     }
-    aiMove() {
+    aiMove(playerMove = 0) {
         if (this.totalTurn == 0) {
             if (this.mapSize % 2) {
                 this.claim(Math.floor((this.mapSize * this.mapSize) / 2));
@@ -1023,6 +1027,58 @@ class TicTacToe {
             else {
                 this.claim(Math.floor(Math.random() * (this.mapSize * this.mapSize)));
             }
+        }
+        else {
+            const move = Math.floor(Math.random() * 7);
+            if (move == 0) {
+                if (this.up(playerMove)) {
+                    if (this.tile[this.up(playerMove)] == null)
+                        return this.claim(this.up(playerMove));
+                }
+            }
+            else if (move == 1) {
+                if (this.bottom(playerMove)) {
+                    if (this.tile[this.bottom(playerMove)] == null)
+                        return this.claim(this.bottom(playerMove));
+                }
+            }
+            else if (move == 2) {
+                if (this.left(playerMove)) {
+                    if (this.tile[this.left(playerMove)] == null)
+                        return this.claim(this.left(playerMove));
+                }
+            }
+            else if (move == 3) {
+                if (this.right(playerMove)) {
+                    if (this.tile[this.right(playerMove)] == null)
+                        return this.claim(this.right(playerMove));
+                }
+            }
+            else if (move == 4) {
+                if (this.upRight(playerMove)) {
+                    if (this.tile[this.upRight(playerMove)] == null)
+                        return this.claim(this.upRight(playerMove));
+                }
+            }
+            else if (move == 5) {
+                if (this.upLeft(playerMove)) {
+                    if (this.tile[this.upLeft(playerMove)] == null)
+                        return this.claim(this.upLeft(playerMove));
+                }
+            }
+            else if (move == 6) {
+                if (this.bottomRight(playerMove)) {
+                    if (this.tile[this.bottomRight(playerMove)] == null)
+                        return this.claim(this.bottomRight(playerMove));
+                }
+            }
+            else if (move == 7) {
+                if (this.bottomLeft(playerMove)) {
+                    if (this.tile[this.bottomLeft(playerMove)] == null)
+                        return this.claim(this.bottomLeft(playerMove));
+                }
+            }
+            return this.aiMove(playerMove);
         }
     }
 }
