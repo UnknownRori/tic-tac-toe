@@ -11,6 +11,7 @@ interface ITicTacToe {
     turn: Player;
     isStarted: boolean;
     withAI: boolean;
+    aiFirst: boolean;
     gameTileElement: NodeListOf<HTMLElement>;
     currentPlayerDisplay: HTMLElement;
 

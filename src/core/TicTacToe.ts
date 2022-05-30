@@ -11,8 +11,10 @@ class TicTacToe implements ITicTacToe {
     public turn: Player = "X";
     public isStarted = false;
     public withAI = false;
+    public aiFirst: boolean = false;
     public gameTileElement: NodeListOf<HTMLElement>;
     public currentPlayerDisplay: HTMLElement;
+    private isAITurn: boolean = false;
 
     private winStreakRecord = {
         X: 0,
@@ -35,6 +37,10 @@ class TicTacToe implements ITicTacToe {
         this.gameTileElement = gameTileElement;
         this.isStarted = true;
         this.generateTile();
+        if (this.withAI && this.aiFirst) {
+            this.isAITurn = true;
+            this.claim(2);
+        }
     }
 
     /**
@@ -62,6 +68,8 @@ class TicTacToe implements ITicTacToe {
             this.tile[index] = this.turn;
             this.winChecker(index);
 
+            this.isAITurn = !this.isAITurn;
+
             if (this.turn == "O") {
                 this.turn = "X";
             } else {
@@ -72,6 +80,10 @@ class TicTacToe implements ITicTacToe {
             this.gameTileElement.forEach((tile, index) => {
                 tile.textContent = this.tile[index];
             });
+
+            if (this.withAI && this.isAITurn) {
+                this.claim(4);
+            }
         }
     }
 

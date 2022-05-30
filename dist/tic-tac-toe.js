@@ -737,6 +737,8 @@ class TicTacToe {
         this.turn = "X";
         this.isStarted = false;
         this.withAI = false;
+        this.aiFirst = false;
+        this.isAITurn = false;
         this.winStreakRecord = {
             X: 0,
             O: 0
@@ -754,6 +756,10 @@ class TicTacToe {
         this.gameTileElement = gameTileElement;
         this.isStarted = true;
         this.generateTile();
+        if (this.withAI && this.aiFirst) {
+            this.isAITurn = true;
+            this.claim(2);
+        }
     }
     /**
      * Reset current game enviroment
@@ -778,6 +784,7 @@ class TicTacToe {
         if (this.tile[index] == null) {
             this.tile[index] = this.turn;
             this.winChecker(index);
+            this.isAITurn = !this.isAITurn;
             if (this.turn == "O") {
                 this.turn = "X";
             }
@@ -788,6 +795,9 @@ class TicTacToe {
             this.gameTileElement.forEach((tile, index) => {
                 tile.textContent = this.tile[index];
             });
+            if (this.withAI && this.isAITurn) {
+                this.claim(4);
+            }
         }
     }
     /**
@@ -1095,6 +1105,7 @@ startGameButton.addEventListener('click', () => {
     resetGameMenuUIElement.classList.remove('hidden');
     // Insert the parsed value inside the game API
     game.withAI = withAI;
+    game.aiFirst = aiFirst;
     game.mapSize = mapSize;
     game.minTile = minTile;
     game.minStreak = minStreak;

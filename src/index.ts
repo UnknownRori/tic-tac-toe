@@ -69,6 +69,7 @@ startGameButton.addEventListener('click', () => {
 
     // Insert the parsed value inside the game API
     game.withAI = withAI;
+    game.aiFirst = aiFirst;
     game.mapSize = mapSize;
     game.minTile = minTile;
     game.minStreak = minStreak;
