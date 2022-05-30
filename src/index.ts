@@ -5,6 +5,8 @@ import createTile from "./helpers/createTile";
 // Game enviroment
 const gameTileID = 'gameElement';
 const gameTileDataSet = 'tile';
+let withAI = false;
+let aiFirst = false;
 
 const gameElement = <HTMLElement>document.querySelector('#game');
 let gameTileElement = document.querySelectorAll(`#${gameTileID}`) as NodeListOf<HTMLElement>;
@@ -13,18 +15,28 @@ let gameTileElement = document.querySelectorAll(`#${gameTileID}`) as NodeListOf<
 const mapSizeElement = <HTMLInputElement>document.querySelector('#mapSize');
 const minTileElement = <HTMLInputElement>document.querySelector('#minTile');
 const winStreakElement = <HTMLInputElement>document.querySelector('#winStreak');
-const currentPlayerDisplay = <HTMLElement>document.querySelector('#currentPlayer');
+const withAIElement = <HTMLInputElement>document.querySelector('#withAI');
+const aiFirstElement = <HTMLInputElement>document.querySelector('#aiFirst');
 
 // Main UI
 const mainUIElement = <HTMLElement>document.querySelector('#ui');
 const newGameMenuUIElement = <HTMLElement>document.querySelector('#new');
 const resetGameMenuUIElement = <HTMLElement>document.querySelector('#reset');
+const currentPlayerDisplay = <HTMLElement>document.querySelector('#currentPlayer');
 
 // Button
 const startGameButton = <HTMLButtonElement>document.querySelector('#startGame');
 const resetGameButton = <HTMLButtonElement>document.querySelector('#resetGame');
 
 const game = new TicTacToe(gameTileElement, currentPlayerDisplay);
+
+withAIElement.addEventListener('click', () => {
+    withAI = withAIElement.checked;
+})
+
+aiFirstElement.addEventListener('click', () => {
+    aiFirst = aiFirstElement.checked;
+})
 
 startGameButton.addEventListener('click', () => {
     // Parse the map, min tile, min streak value.
@@ -56,6 +68,7 @@ startGameButton.addEventListener('click', () => {
     resetGameMenuUIElement.classList.remove('hidden');
 
     // Insert the parsed value inside the game API
+    game.withAI = withAI;
     game.mapSize = mapSize;
     game.minTile = minTile;
     game.minStreak = minStreak;
@@ -70,11 +83,7 @@ startGameButton.addEventListener('click', () => {
         element.addEventListener('click', () => {
             const index = parseInt(<string>element.dataset[gameTileDataSet])
 
-            if (element.innerText == '') {
-                element.innerText = game.turn;
-
-                game.claim(index);
-            }
+            game.claim(index);
         })
     })
 });

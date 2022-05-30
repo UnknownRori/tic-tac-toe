@@ -172,7 +172,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".w-screen-full {\r\n    min-width: 100vw;\r\n}\r\n\r\n.h-screen-full {\r\n    min-height: 100vh;\r\n}\r\n\r\n.fixed {\r\n    position: fixed;\r\n}\r\n\r\n.rounded {\r\n    border-radius: 0.25rem;\r\n}\r\n\r\n.flex {\r\n    display: flex;\r\n}\r\n\r\n.flex-row {\r\n    flex-direction: row;\r\n}\r\n\r\n.flex-col {\r\n    flex-direction: column;\r\n}\r\n\r\n.justify-center {\r\n    justify-content: center;\r\n}\r\n\r\n.p-8 {\r\n    padding: 8px;\r\n}\r\n\r\n.p-20 {\r\n    padding: 30px;\r\n}\r\n\r\n.m-auto {\r\n    margin: auto;\r\n}\r\n\r\n.my-auto {\r\n    margin-top: auto;\r\n    margin-bottom: auto;\r\n}\r\n\r\n.my-2 {\r\n    margin-top: 2px;\r\n    margin-bottom: 2px;\r\n}\r\n\r\n.mx-auto {\r\n    margin-left: auto;\r\n    margin-right: auto;\r\n}\r\n\r\n.ml-auto {\r\n    margin-left: auto;\r\n}\r\n\r\n.text-white {\r\n    color: white;\r\n}\r\n\r\n.text-center {\r\n    text-align: center;\r\n}\r\n\r\n.hidden {\r\n    display: none;\r\n}\r\n\r\n.w-30 {\r\n    width: 30%;\r\n}", "",{"version":3,"sources":["webpack://./src/asset/scss/utility.scss"],"names":[],"mappings":"AAAA;IACI,gBAAgB;AACpB;;AAEA;IACI,iBAAiB;AACrB;;AAEA;IACI,eAAe;AACnB;;AAEA;IACI,sBAAsB;AAC1B;;AAEA;IACI,aAAa;AACjB;;AAEA;IACI,mBAAmB;AACvB;;AAEA;IACI,sBAAsB;AAC1B;;AAEA;IACI,uBAAuB;AAC3B;;AAEA;IACI,YAAY;AAChB;;AAEA;IACI,aAAa;AACjB;;AAEA;IACI,YAAY;AAChB;;AAEA;IACI,gBAAgB;IAChB,mBAAmB;AACvB;;AAEA;IACI,eAAe;IACf,kBAAkB;AACtB;;AAEA;IACI,iBAAiB;IACjB,kBAAkB;AACtB;;AAEA;IACI,iBAAiB;AACrB;;AAEA;IACI,YAAY;AAChB;;AAEA;IACI,kBAAkB;AACtB;;AAEA;IACI,aAAa;AACjB;;AAEA;IACI,UAAU;AACd","sourcesContent":[".w-screen-full {\r\n    min-width: 100vw;\r\n}\r\n\r\n.h-screen-full {\r\n    min-height: 100vh;\r\n}\r\n\r\n.fixed {\r\n    position: fixed;\r\n}\r\n\r\n.rounded {\r\n    border-radius: 0.25rem;\r\n}\r\n\r\n.flex {\r\n    display: flex;\r\n}\r\n\r\n.flex-row {\r\n    flex-direction: row;\r\n}\r\n\r\n.flex-col {\r\n    flex-direction: column;\r\n}\r\n\r\n.justify-center {\r\n    justify-content: center;\r\n}\r\n\r\n.p-8 {\r\n    padding: 8px;\r\n}\r\n\r\n.p-20 {\r\n    padding: 30px;\r\n}\r\n\r\n.m-auto {\r\n    margin: auto;\r\n}\r\n\r\n.my-auto {\r\n    margin-top: auto;\r\n    margin-bottom: auto;\r\n}\r\n\r\n.my-2 {\r\n    margin-top: 2px;\r\n    margin-bottom: 2px;\r\n}\r\n\r\n.mx-auto {\r\n    margin-left: auto;\r\n    margin-right: auto;\r\n}\r\n\r\n.ml-auto {\r\n    margin-left: auto;\r\n}\r\n\r\n.text-white {\r\n    color: white;\r\n}\r\n\r\n.text-center {\r\n    text-align: center;\r\n}\r\n\r\n.hidden {\r\n    display: none;\r\n}\r\n\r\n.w-30 {\r\n    width: 30%;\r\n}"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, ".w-screen-full {\r\n    min-width: 100vw;\r\n}\r\n\r\n.h-screen-full {\r\n    min-height: 100vh;\r\n}\r\n\r\n.fixed {\r\n    position: fixed;\r\n}\r\n\r\n.rounded {\r\n    border-radius: 0.25rem;\r\n}\r\n\r\n.flex {\r\n    display: flex;\r\n}\r\n\r\n.flex-row {\r\n    flex-direction: row;\r\n}\r\n\r\n.flex-col {\r\n    flex-direction: column;\r\n}\r\n\r\n.justify-center {\r\n    justify-content: center;\r\n}\r\n\r\n.p-8 {\r\n    padding: 8px;\r\n}\r\n\r\n.p-20 {\r\n    padding: 30px;\r\n}\r\n\r\n.m-auto {\r\n    margin: auto;\r\n}\r\n\r\n.m-4 {\r\n    margin: 4px;\r\n}\r\n\r\n.my-auto {\r\n    margin-top: auto;\r\n    margin-bottom: auto;\r\n}\r\n\r\n.my-2 {\r\n    margin-top: 2px;\r\n    margin-bottom: 2px;\r\n}\r\n\r\n.mx-auto {\r\n    margin-left: auto;\r\n    margin-right: auto;\r\n}\r\n\r\n.ml-auto {\r\n    margin-left: auto;\r\n}\r\n\r\n.text-white {\r\n    color: white;\r\n}\r\n\r\n.text-center {\r\n    text-align: center;\r\n}\r\n\r\n.hidden {\r\n    display: none;\r\n}\r\n\r\n.w-30 {\r\n    width: 30%;\r\n}", "",{"version":3,"sources":["webpack://./src/asset/scss/utility.scss"],"names":[],"mappings":"AAAA;IACI,gBAAgB;AACpB;;AAEA;IACI,iBAAiB;AACrB;;AAEA;IACI,eAAe;AACnB;;AAEA;IACI,sBAAsB;AAC1B;;AAEA;IACI,aAAa;AACjB;;AAEA;IACI,mBAAmB;AACvB;;AAEA;IACI,sBAAsB;AAC1B;;AAEA;IACI,uBAAuB;AAC3B;;AAEA;IACI,YAAY;AAChB;;AAEA;IACI,aAAa;AACjB;;AAEA;IACI,YAAY;AAChB;;AAEA;IACI,WAAW;AACf;;AAEA;IACI,gBAAgB;IAChB,mBAAmB;AACvB;;AAEA;IACI,eAAe;IACf,kBAAkB;AACtB;;AAEA;IACI,iBAAiB;IACjB,kBAAkB;AACtB;;AAEA;IACI,iBAAiB;AACrB;;AAEA;IACI,YAAY;AAChB;;AAEA;IACI,kBAAkB;AACtB;;AAEA;IACI,aAAa;AACjB;;AAEA;IACI,UAAU;AACd","sourcesContent":[".w-screen-full {\r\n    min-width: 100vw;\r\n}\r\n\r\n.h-screen-full {\r\n    min-height: 100vh;\r\n}\r\n\r\n.fixed {\r\n    position: fixed;\r\n}\r\n\r\n.rounded {\r\n    border-radius: 0.25rem;\r\n}\r\n\r\n.flex {\r\n    display: flex;\r\n}\r\n\r\n.flex-row {\r\n    flex-direction: row;\r\n}\r\n\r\n.flex-col {\r\n    flex-direction: column;\r\n}\r\n\r\n.justify-center {\r\n    justify-content: center;\r\n}\r\n\r\n.p-8 {\r\n    padding: 8px;\r\n}\r\n\r\n.p-20 {\r\n    padding: 30px;\r\n}\r\n\r\n.m-auto {\r\n    margin: auto;\r\n}\r\n\r\n.m-4 {\r\n    margin: 4px;\r\n}\r\n\r\n.my-auto {\r\n    margin-top: auto;\r\n    margin-bottom: auto;\r\n}\r\n\r\n.my-2 {\r\n    margin-top: 2px;\r\n    margin-bottom: 2px;\r\n}\r\n\r\n.mx-auto {\r\n    margin-left: auto;\r\n    margin-right: auto;\r\n}\r\n\r\n.ml-auto {\r\n    margin-left: auto;\r\n}\r\n\r\n.text-white {\r\n    color: white;\r\n}\r\n\r\n.text-center {\r\n    text-align: center;\r\n}\r\n\r\n.hidden {\r\n    display: none;\r\n}\r\n\r\n.w-30 {\r\n    width: 30%;\r\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -750,6 +750,7 @@ class TicTacToe {
      * @return void
      */
     start(gameTileElement) {
+        this.tile = [];
         this.gameTileElement = gameTileElement;
         this.isStarted = true;
         this.generateTile();
@@ -760,7 +761,6 @@ class TicTacToe {
      */
     reset() {
         this.isStarted = false;
-        this.tile = [];
         this.turn = "X";
         this.mapSize = 3;
         this.minTile = 3;
@@ -777,15 +777,18 @@ class TicTacToe {
     claim(index) {
         if (this.tile[index] == null) {
             this.tile[index] = this.turn;
+            this.winChecker(index);
+            if (this.turn == "O") {
+                this.turn = "X";
+            }
+            else {
+                this.turn = "O";
+            }
+            this.currentPlayerDisplay.textContent = this.turn;
+            this.gameTileElement.forEach((tile, index) => {
+                tile.textContent = this.tile[index];
+            });
         }
-        this.winChecker(index);
-        if (this.turn == "O") {
-            this.turn = "X";
-        }
-        else {
-            this.turn = "O";
-        }
-        this.currentPlayerDisplay.textContent = this.turn;
     }
     /**
      * Check the all tile for the winner
@@ -1041,21 +1044,31 @@ const createTile_1 = __importDefault(__webpack_require__(/*! ./helpers/createTil
 // Game enviroment
 const gameTileID = 'gameElement';
 const gameTileDataSet = 'tile';
+let withAI = false;
+let aiFirst = false;
 const gameElement = document.querySelector('#game');
 let gameTileElement = document.querySelectorAll(`#${gameTileID}`);
 // Main Game UI
 const mapSizeElement = document.querySelector('#mapSize');
 const minTileElement = document.querySelector('#minTile');
 const winStreakElement = document.querySelector('#winStreak');
-const currentPlayerDisplay = document.querySelector('#currentPlayer');
+const withAIElement = document.querySelector('#withAI');
+const aiFirstElement = document.querySelector('#aiFirst');
 // Main UI
 const mainUIElement = document.querySelector('#ui');
 const newGameMenuUIElement = document.querySelector('#new');
 const resetGameMenuUIElement = document.querySelector('#reset');
+const currentPlayerDisplay = document.querySelector('#currentPlayer');
 // Button
 const startGameButton = document.querySelector('#startGame');
 const resetGameButton = document.querySelector('#resetGame');
 const game = new TicTacToe_1.default(gameTileElement, currentPlayerDisplay);
+withAIElement.addEventListener('click', () => {
+    withAI = withAIElement.checked;
+});
+aiFirstElement.addEventListener('click', () => {
+    aiFirst = aiFirstElement.checked;
+});
 startGameButton.addEventListener('click', () => {
     // Parse the map, min tile, min streak value.
     const mapSize = parseInt(mapSizeElement.value);
@@ -1081,6 +1094,7 @@ startGameButton.addEventListener('click', () => {
     newGameMenuUIElement.classList.add('hidden');
     resetGameMenuUIElement.classList.remove('hidden');
     // Insert the parsed value inside the game API
+    game.withAI = withAI;
     game.mapSize = mapSize;
     game.minTile = minTile;
     game.minStreak = minStreak;
@@ -1092,10 +1106,7 @@ startGameButton.addEventListener('click', () => {
     gameTileElement.forEach((element) => {
         element.addEventListener('click', () => {
             const index = parseInt(element.dataset[gameTileDataSet]);
-            if (element.innerText == '') {
-                element.innerText = game.turn;
-                game.claim(index);
-            }
+            game.claim(index);
         });
     });
 });

@@ -31,6 +31,7 @@ class TicTacToe implements ITicTacToe {
      * @return void
      */
     public start(gameTileElement: NodeListOf<HTMLElement>): void {
+        this.tile = [];
         this.gameTileElement = gameTileElement;
         this.isStarted = true;
         this.generateTile();
@@ -42,7 +43,6 @@ class TicTacToe implements ITicTacToe {
      */
     public reset(): void {
         this.isStarted = false;
-        this.tile = [];
         this.turn = "X";
         this.mapSize = 3;
         this.minTile = 3;
@@ -60,17 +60,19 @@ class TicTacToe implements ITicTacToe {
     public claim(index: number): void {
         if (this.tile[index] == null) {
             this.tile[index] = this.turn;
+            this.winChecker(index);
+
+            if (this.turn == "O") {
+                this.turn = "X";
+            } else {
+                this.turn = "O";
+            }
+
+            this.currentPlayerDisplay.textContent = this.turn;
+            this.gameTileElement.forEach((tile, index) => {
+                tile.textContent = this.tile[index];
+            });
         }
-
-        this.winChecker(index);
-
-        if (this.turn == "O") {
-            this.turn = "X";
-        } else {
-            this.turn = "O";
-        }
-
-        this.currentPlayerDisplay.textContent = this.turn;
     }
 
     /**
