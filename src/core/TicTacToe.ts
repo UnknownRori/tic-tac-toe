@@ -15,6 +15,7 @@ class TicTacToe implements ITicTacToe {
     public gameTileElement: NodeListOf<HTMLElement>;
     public currentPlayerDisplay: HTMLElement;
     private isAITurn: boolean = false;
+    public totalTurn = 0;
 
     private winStreakRecord = {
         X: 0,
@@ -39,7 +40,7 @@ class TicTacToe implements ITicTacToe {
         this.generateTile();
         if (this.withAI && this.aiFirst) {
             this.isAITurn = true;
-            this.claim(2);
+            this.aiMove();
         }
     }
 
@@ -53,6 +54,7 @@ class TicTacToe implements ITicTacToe {
         this.mapSize = 3;
         this.minTile = 3;
         this.minStreak = 3;
+        this.totalTurn = 0;
         this.winStreakRecord = {
             X: 0,
             O: 0
@@ -66,6 +68,7 @@ class TicTacToe implements ITicTacToe {
     public claim(index: number): void {
         if (this.tile[index] == null) {
             this.tile[index] = this.turn;
+            this.totalTurn++;
             this.winChecker(index);
 
             this.isAITurn = !this.isAITurn;
@@ -82,7 +85,7 @@ class TicTacToe implements ITicTacToe {
             });
 
             if (this.withAI && this.isAITurn) {
-                this.claim(4);
+                this.aiMove();
             }
         }
     }
@@ -256,7 +259,6 @@ class TicTacToe implements ITicTacToe {
         if (!((currentIndex + 1) % this.mapSize)) return false;
         const calc = currentIndex + (this.mapSize + 1);
         if (calc > (this.mapSize * this.mapSize) || calc < 0) return false;
-        console.log(calc);
         return calc;
     }
 
@@ -301,6 +303,14 @@ class TicTacToe implements ITicTacToe {
      */
     private generateTile(): void {
         this.tile = Array(this.mapSize * this.mapSize).fill(null);
+    }
+
+    private aiMove() {
+        if (this.totalTurn == 0) {
+            if (this.mapSize % 2) {
+                this.claim(Math.floor((this.mapSize * this.mapSize) / 2));
+            }
+        }
     }
 }
 

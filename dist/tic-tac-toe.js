@@ -739,6 +739,7 @@ class TicTacToe {
         this.withAI = false;
         this.aiFirst = false;
         this.isAITurn = false;
+        this.totalTurn = 0;
         this.winStreakRecord = {
             X: 0,
             O: 0
@@ -758,7 +759,7 @@ class TicTacToe {
         this.generateTile();
         if (this.withAI && this.aiFirst) {
             this.isAITurn = true;
-            this.claim(2);
+            this.aiMove();
         }
     }
     /**
@@ -771,6 +772,7 @@ class TicTacToe {
         this.mapSize = 3;
         this.minTile = 3;
         this.minStreak = 3;
+        this.totalTurn = 0;
         this.winStreakRecord = {
             X: 0,
             O: 0
@@ -783,6 +785,7 @@ class TicTacToe {
     claim(index) {
         if (this.tile[index] == null) {
             this.tile[index] = this.turn;
+            this.totalTurn++;
             this.winChecker(index);
             this.isAITurn = !this.isAITurn;
             if (this.turn == "O") {
@@ -796,7 +799,7 @@ class TicTacToe {
                 tile.textContent = this.tile[index];
             });
             if (this.withAI && this.isAITurn) {
-                this.claim(4);
+                this.aiMove();
             }
         }
     }
@@ -966,7 +969,6 @@ class TicTacToe {
         const calc = currentIndex + (this.mapSize + 1);
         if (calc > (this.mapSize * this.mapSize) || calc < 0)
             return false;
-        console.log(calc);
         return calc;
     }
     bottom(currentIndex) {
@@ -1012,6 +1014,13 @@ class TicTacToe {
      */
     generateTile() {
         this.tile = Array(this.mapSize * this.mapSize).fill(null);
+    }
+    aiMove() {
+        if (this.totalTurn == 0) {
+            if (this.mapSize % 2) {
+                this.claim(Math.floor((this.mapSize * this.mapSize) / 2));
+            }
+        }
     }
 }
 exports["default"] = TicTacToe;

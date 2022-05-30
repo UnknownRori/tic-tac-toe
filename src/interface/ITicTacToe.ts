@@ -14,6 +14,7 @@ interface ITicTacToe {
     aiFirst: boolean;
     gameTileElement: NodeListOf<HTMLElement>;
     currentPlayerDisplay: HTMLElement;
+    totalTurn: number;
 
     start(gameTileElement: NodeListOf<HTMLElement>): void;
     reset(): void;
