@@ -108,6 +108,7 @@ class TicTacToe implements ITicTacToe {
         if (this.tile[index] == this.turn) {
             const newIndex = this.up(index);
             streak++;
+            if (streak == this.minTile) return streak;
             if (typeof newIndex != 'boolean') {
                 return this.checkUp(newIndex, streak);
             }
@@ -119,6 +120,7 @@ class TicTacToe implements ITicTacToe {
         if (this.tile[index] == this.turn) {
             const newIndex = this.bottom(index);
             streak++;
+            if (streak == this.minTile) return streak;
             if (typeof newIndex != 'boolean') {
                 return this.checkBottom(newIndex, streak);
             }
@@ -132,6 +134,7 @@ class TicTacToe implements ITicTacToe {
         if (this.tile[index] == this.turn) {
             const newIndex = this.right(index);
             streak++;
+            if (streak == this.minTile) return streak;
             if (typeof newIndex != 'boolean') {
                 return this.checkRight(newIndex, streak);
             }
@@ -143,6 +146,7 @@ class TicTacToe implements ITicTacToe {
         if (this.tile[index] == this.turn) {
             const newIndex = this.left(index);
             streak++;
+            if (streak == this.minTile) return streak;
             if (typeof newIndex != 'boolean') {
                 return this.checkLeft(newIndex, streak);
             }
@@ -156,6 +160,7 @@ class TicTacToe implements ITicTacToe {
         if (this.tile[index] == this.turn) {
             const newIndex = this.upRight(index);
             streak++;
+            if (streak == this.minTile) return streak;
             if (typeof newIndex != 'boolean') {
                 return this.checkUpRight(newIndex, streak);
             }
@@ -167,6 +172,7 @@ class TicTacToe implements ITicTacToe {
         if (this.tile[index] == this.turn) {
             const newIndex = this.upLeft(index);
             streak++;
+            if (streak == this.minTile) return streak;
             if (typeof newIndex != 'boolean') {
                 return this.checkUpLeft(newIndex, streak);
             }
@@ -178,6 +184,7 @@ class TicTacToe implements ITicTacToe {
         if (this.tile[index] == this.turn) {
             const newIndex = this.bottomLeft(index);
             streak++;
+            if (streak == this.minTile) return streak;
             if (typeof newIndex != 'boolean') {
                 return this.checkBottomLeft(newIndex, streak);
             }
@@ -189,6 +196,7 @@ class TicTacToe implements ITicTacToe {
         if (this.tile[index] == this.turn) {
             const newIndex = this.bottomRight(index);
             streak++;
+            if (streak == this.minTile) return streak;
             if (typeof newIndex != 'boolean') {
                 return this.checkBottomRight(newIndex, streak);
             }
