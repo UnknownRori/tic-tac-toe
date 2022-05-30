@@ -245,6 +245,7 @@ class TicTacToe implements ITicTacToe {
     }
 
     protected right(currentIndex: number) {
+        if (!!((currentIndex + 1) % this.mapSize)) return false;
         const calc = currentIndex + 1;
         if (calc > (this.mapSize * this.mapSize) || calc < 0) return false;
         return calc;
@@ -258,7 +259,7 @@ class TicTacToe implements ITicTacToe {
 
     protected bottom(currentIndex: number) {
         const calc = currentIndex + this.mapSize;
-        if (calc > (this.mapSize * this.mapSize) || calc < 0) return false;
+        if (calc > (this.mapSize * this.mapSize - 1) || calc < 0) return false;
         return calc;
     }
 
@@ -269,6 +270,7 @@ class TicTacToe implements ITicTacToe {
     }
 
     protected left(currentIndex: number) {
+        if (!(currentIndex % this.mapSize)) return false;
         const calc = currentIndex - 1;
         if (calc > (this.mapSize * this.mapSize) || calc < 0) return false;
         return calc;
