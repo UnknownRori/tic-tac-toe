@@ -76,57 +76,171 @@ class TicTacToe implements ITicTacToe {
      * @return void
      */
     public winChecker(index: number): void {
+        const streak = {
+            up: 0,
+            bottom: 0,
+            left: 0,
+            right: 0,
+            upRight: 0,
+            upLeft: 0,
+            bottomRight: 0,
+            bottomLeft: 0,
+        };
+
+        streak.up = this.checkUp(index);
+        streak.bottom = this.checkBottom(index);
+        streak.right = this.checkRight(index);
+        streak.left = this.checkLeft(index);
+        streak.upRight = this.checkUpRight(index);
+        streak.upLeft = this.checkUpLeft(index);
+        streak.bottomLeft = this.checkBottomLeft(index);
+        streak.bottomRight = this.checkBottomRight(index);
+        console.log(this.turn, streak);
 
         if (this.tile.every(element => element !== null)) {
             alert('Draw!');
         }
     }
 
-    private up(currentIndex: number) {
+    // Vertical Checker
+
+    private checkUp(index: number, streak = 0): number {
+        if (this.tile[index] == this.turn) {
+            const newIndex = this.up(index);
+            streak++;
+            if (typeof newIndex != 'boolean') {
+                return this.checkUp(newIndex, streak);
+            }
+        }
+        return streak;
+    }
+
+    private checkBottom(index: number, streak = 0): number {
+        if (this.tile[index] == this.turn) {
+            const newIndex = this.bottom(index);
+            streak++;
+            if (typeof newIndex != 'boolean') {
+                return this.checkBottom(newIndex, streak);
+            }
+        }
+        return streak;
+    }
+
+    // Horizontal Checker
+
+    private checkRight(index: number, streak = 0): number {
+        if (this.tile[index] == this.turn) {
+            const newIndex = this.right(index);
+            streak++;
+            if (typeof newIndex != 'boolean') {
+                return this.checkRight(newIndex, streak);
+            }
+        }
+        return streak;
+    }
+
+    private checkLeft(index: number, streak = 0): number {
+        if (this.tile[index] == this.turn) {
+            const newIndex = this.left(index);
+            streak++;
+            if (typeof newIndex != 'boolean') {
+                return this.checkLeft(newIndex, streak);
+            }
+        }
+        return streak;
+    }
+
+    // Diagonal Checker
+
+    private checkUpRight(index: number, streak = 0): number {
+        if (this.tile[index] == this.turn) {
+            const newIndex = this.upRight(index);
+            streak++;
+            if (typeof newIndex != 'boolean') {
+                return this.checkUpRight(newIndex, streak);
+            }
+        }
+        return streak;
+    }
+
+    private checkUpLeft(index: number, streak = 0): number {
+        if (this.tile[index] == this.turn) {
+            const newIndex = this.upLeft(index);
+            streak++;
+            if (typeof newIndex != 'boolean') {
+                return this.checkUpLeft(newIndex, streak);
+            }
+        }
+        return streak;
+    }
+
+    private checkBottomLeft(index: number, streak = 0): number {
+        if (this.tile[index] == this.turn) {
+            const newIndex = this.bottomLeft(index);
+            streak++;
+            if (typeof newIndex != 'boolean') {
+                return this.checkBottomLeft(newIndex, streak);
+            }
+        }
+        return streak;
+    }
+
+    private checkBottomRight(index: number, streak = 0): number {
+        if (this.tile[index] == this.turn) {
+            const newIndex = this.bottomRight(index);
+            streak++;
+            if (typeof newIndex != 'boolean') {
+                return this.checkBottomRight(newIndex, streak);
+            }
+        }
+        return streak;
+    }
+
+    protected up(currentIndex: number) {
         const calc = currentIndex - this.mapSize;
-        if (calc > this.mapSize || calc < 0) return false;
+        if (calc > (this.mapSize * this.mapSize) || calc < 0) return false;
         return calc;
     }
 
-    private upRight(currentIndex: number) {
+    protected upRight(currentIndex: number) {
         const calc = currentIndex - (this.mapSize - 1);
-        if (calc > this.mapSize || calc < 0) return false;
+        if (calc > (this.mapSize * this.mapSize) || calc < 0) return false;
         return calc;
     }
 
-    private right(currentIndex: number) {
+    protected right(currentIndex: number) {
         const calc = currentIndex + 1;
-        if (calc > this.mapSize || calc < 0) return false;
+        if (calc > (this.mapSize * this.mapSize) || calc < 0) return false;
         return calc;
     }
 
-    private rightBottom(currentIndex: number) {
+    protected bottomRight(currentIndex: number) {
         const calc = currentIndex + (this.mapSize + 1);
-        if (calc > this.mapSize || calc < 0) return false;
+        if (calc > (this.mapSize * this.mapSize) || calc < 0) return false;
         return calc;
     }
 
-    private bottom(currentIndex: number) {
+    protected bottom(currentIndex: number) {
         const calc = currentIndex + this.mapSize;
-        if (calc > this.mapSize || calc < 0) return false;
+        if (calc > (this.mapSize * this.mapSize) || calc < 0) return false;
         return calc;
     }
 
-    private leftBottom(currentIndex: number) {
+    protected bottomLeft(currentIndex: number) {
         const calc = currentIndex + (this.mapSize - 1);
-        if (calc > this.mapSize || calc < 0) return false;
+        if (calc > (this.mapSize * this.mapSize) || calc < 0) return false;
         return calc;
     }
 
-    private left(currentIndex: number) {
-        const calc = currentIndex + 1;
-        if (calc > this.mapSize || calc < 0) return false;
+    protected left(currentIndex: number) {
+        const calc = currentIndex - 1;
+        if (calc > (this.mapSize * this.mapSize) || calc < 0) return false;
         return calc;
     }
 
-    private leftUp(currentIndex: number) {
-        const calc = currentIndex + (this.mapSize + 1);
-        if (calc > this.mapSize || calc < 0) return false;
+    protected upLeft(currentIndex: number) {
+        const calc = currentIndex + (this.mapSize - 1);
+        if (calc > (this.mapSize * this.mapSize) || calc < 0) return false;
         return calc;
     }
 

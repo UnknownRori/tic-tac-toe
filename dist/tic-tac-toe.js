@@ -737,6 +737,10 @@ class TicTacToe {
         this.turn = "X";
         this.isStarted = false;
         this.withAI = false;
+        this.winStreakRecord = {
+            X: 0,
+            O: 0
+        };
         this.gameTileElement = gameTileElement;
         this.currentPlayerDisplay = currentPlayerDisplay;
         this.currentPlayerDisplay.textContent = this.turn;
@@ -759,6 +763,10 @@ class TicTacToe {
         this.mapSize = 3;
         this.minTile = 3;
         this.minStreak = 3;
+        this.winStreakRecord = {
+            X: 0,
+            O: 0
+        };
     }
     /**
      * Claim a tile using current player turn
@@ -768,6 +776,7 @@ class TicTacToe {
         if (this.tile[index] == null) {
             this.tile[index] = this.turn;
         }
+        this.winChecker(index);
         if (this.turn == "O") {
             this.turn = "X";
         }
@@ -780,11 +789,173 @@ class TicTacToe {
      * Check the all tile for the winner
      * @return void
      */
-    winChecker() {
-        //
+    winChecker(index) {
+        const streak = {
+            up: 0,
+            bottom: 0,
+            left: 0,
+            right: 0,
+            upRight: 0,
+            upLeft: 0,
+            bottomRight: 0,
+            bottomLeft: 0,
+        };
+        streak.up = this.checkUp(index);
+        streak.bottom = this.checkBottom(index);
+        streak.right = this.checkRight(index);
+        streak.left = this.checkLeft(index);
+        streak.upRight = this.checkUpRight(index);
+        streak.upLeft = this.checkUpLeft(index);
+        streak.bottomLeft = this.checkBottomLeft(index);
+        streak.bottomRight = this.checkBottomRight(index);
+        console.log(this.turn, streak);
+        if (this.tile.every(element => element !== null)) {
+            alert('Draw!');
+        }
     }
+    // Vertical Checker
+    checkUp(index, streak = 0) {
+        if (this.tile[index] == this.turn) {
+            const newIndex = this.up(index);
+            streak++;
+            if (typeof newIndex != 'boolean') {
+                return this.checkUp(newIndex, streak);
+            }
+        }
+        return streak;
+    }
+    checkBottom(index, streak = 0) {
+        if (this.tile[index] == this.turn) {
+            const newIndex = this.bottom(index);
+            streak++;
+            if (typeof newIndex != 'boolean') {
+                return this.checkBottom(newIndex, streak);
+            }
+        }
+        return streak;
+    }
+    // Horizontal Checker
+    checkRight(index, streak = 0) {
+        if (this.tile[index] == this.turn) {
+            const newIndex = this.right(index);
+            streak++;
+            if (typeof newIndex != 'boolean') {
+                return this.checkRight(newIndex, streak);
+            }
+        }
+        return streak;
+    }
+    checkLeft(index, streak = 0) {
+        if (this.tile[index] == this.turn) {
+            const newIndex = this.left(index);
+            streak++;
+            if (typeof newIndex != 'boolean') {
+                return this.checkLeft(newIndex, streak);
+            }
+        }
+        return streak;
+    }
+    // Diagonal Checker
+    checkUpRight(index, streak = 0) {
+        if (this.tile[index] == this.turn) {
+            const newIndex = this.upRight(index);
+            streak++;
+            if (typeof newIndex != 'boolean') {
+                return this.checkUpRight(newIndex, streak);
+            }
+        }
+        return streak;
+    }
+    checkUpLeft(index, streak = 0) {
+        if (this.tile[index] == this.turn) {
+            const newIndex = this.upLeft(index);
+            streak++;
+            if (typeof newIndex != 'boolean') {
+                return this.checkUpLeft(newIndex, streak);
+            }
+        }
+        return streak;
+    }
+    checkBottomLeft(index, streak = 0) {
+        if (this.tile[index] == this.turn) {
+            const newIndex = this.bottomLeft(index);
+            streak++;
+            if (typeof newIndex != 'boolean') {
+                return this.checkBottomLeft(newIndex, streak);
+            }
+        }
+        return streak;
+    }
+    checkBottomRight(index, streak = 0) {
+        if (this.tile[index] == this.turn) {
+            const newIndex = this.bottomRight(index);
+            streak++;
+            if (typeof newIndex != 'boolean') {
+                return this.checkBottomRight(newIndex, streak);
+            }
+        }
+        return streak;
+    }
+    up(currentIndex) {
+        const calc = currentIndex - this.mapSize;
+        if (calc > (this.mapSize * this.mapSize) || calc < 0)
+            return false;
+        return calc;
+    }
+    upRight(currentIndex) {
+        const calc = currentIndex - (this.mapSize - 1);
+        if (calc > (this.mapSize * this.mapSize) || calc < 0)
+            return false;
+        return calc;
+    }
+    right(currentIndex) {
+        const calc = currentIndex + 1;
+        if (calc > (this.mapSize * this.mapSize) || calc < 0)
+            return false;
+        return calc;
+    }
+    bottomRight(currentIndex) {
+        const calc = currentIndex + (this.mapSize + 1);
+        if (calc > (this.mapSize * this.mapSize) || calc < 0)
+            return false;
+        return calc;
+    }
+    bottom(currentIndex) {
+        const calc = currentIndex + this.mapSize;
+        if (calc > (this.mapSize * this.mapSize) || calc < 0)
+            return false;
+        return calc;
+    }
+    bottomLeft(currentIndex) {
+        const calc = currentIndex + (this.mapSize - 1);
+        if (calc > (this.mapSize * this.mapSize) || calc < 0)
+            return false;
+        return calc;
+    }
+    left(currentIndex) {
+        const calc = currentIndex - 1;
+        if (calc > (this.mapSize * this.mapSize) || calc < 0)
+            return false;
+        return calc;
+    }
+    upLeft(currentIndex) {
+        const calc = currentIndex + (this.mapSize - 1);
+        if (calc > (this.mapSize * this.mapSize) || calc < 0)
+            return false;
+        return calc;
+    }
+    /**
+     * Add win streak correspond with current turn
+     * @return void
+     */
+    addWinStreak() {
+        this.winStreakRecord[this.turn]++;
+    }
+    /**
+     * Generate array tile to track some changes
+     * @return void
+     */
     generateTile() {
-        // Generate array tile to track changes
         this.tile = Array(this.mapSize * this.mapSize).fill(null);
     }
 }
