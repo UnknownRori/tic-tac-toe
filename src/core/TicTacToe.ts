@@ -12,12 +12,12 @@ class TicTacToe implements ITicTacToe {
     public isStarted = false;
     public withAI = false;
     public gameTileElement: NodeListOf<HTMLElement>;
-    public currentPlayerDisplay: HTMLElement
+    public currentPlayerDisplay: HTMLElement;
 
     private winStreakRecord = {
         X: 0,
         O: 0
-    }
+    };
 
     constructor(gameTileElement: NodeListOf<HTMLElement>, currentPlayerDisplay: HTMLElement) {
         this.gameTileElement = gameTileElement;
@@ -50,7 +50,7 @@ class TicTacToe implements ITicTacToe {
         this.winStreakRecord = {
             X: 0,
             O: 0
-        }
+        };
     }
 
     /**

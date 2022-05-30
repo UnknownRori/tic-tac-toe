@@ -32,11 +32,11 @@ const game = new TicTacToe(gameTileElement, currentPlayerDisplay);
 
 withAIElement.addEventListener('click', () => {
     withAI = withAIElement.checked;
-})
+});
 
 aiFirstElement.addEventListener('click', () => {
     aiFirst = aiFirstElement.checked;
-})
+});
 
 startGameButton.addEventListener('click', () => {
     // Parse the map, min tile, min streak value.
@@ -81,11 +81,11 @@ startGameButton.addEventListener('click', () => {
     game.start(gameTileElement);
     gameTileElement.forEach((element) => {
         element.addEventListener('click', () => {
-            const index = parseInt(<string>element.dataset[gameTileDataSet])
+            const index = parseInt(<string>element.dataset[gameTileDataSet]);
 
             game.claim(index);
-        })
-    })
+        });
+    });
 });
 
 resetGameButton.addEventListener('click', () => {
