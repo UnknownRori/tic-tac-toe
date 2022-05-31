@@ -1,6 +1,6 @@
 import ITicTacToe from "../interface/ITicTacToe";
 import Player from "../types/Player";
-import Navigation from "../types/Streak";
+import Navigation from "../types/Navigation";
 
 class TicTacToe implements ITicTacToe {
     // User generated rules
