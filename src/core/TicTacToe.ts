@@ -12,10 +12,10 @@ class TicTacToe implements ITicTacToe {
     public turn: Player = "X";
     public isStarted = false;
     public withAI = false;
-    public aiFirst: boolean = false;
+    public aiFirst = false;
     public gameTileElement: NodeListOf<HTMLElement>;
     public currentPlayerDisplay: HTMLElement;
-    private isAITurn: boolean = false;
+    private isAITurn = false;
     public totalTurn = 0;
 
     private winStreakRecord = {
