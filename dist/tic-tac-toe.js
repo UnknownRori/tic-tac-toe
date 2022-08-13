@@ -17,11 +17,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
 /* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _node_modules_css_loader_dist_cjs_js_utility_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! -!../../../node_modules/css-loader/dist/cjs.js!./utility.scss */ "./node_modules/css-loader/dist/cjs.js!./src/asset/scss/utility.scss");
-/* harmony import */ var _node_modules_css_loader_dist_cjs_js_components_button_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! -!../../../node_modules/css-loader/dist/cjs.js!./components/button.scss */ "./node_modules/css-loader/dist/cjs.js!./src/asset/scss/components/button.scss");
-/* harmony import */ var _node_modules_css_loader_dist_cjs_js_components_form_component_scss__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! -!../../../node_modules/css-loader/dist/cjs.js!./components/form-component.scss */ "./node_modules/css-loader/dist/cjs.js!./src/asset/scss/components/form-component.scss");
-/* harmony import */ var _node_modules_css_loader_dist_cjs_js_components_background_scss__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! -!../../../node_modules/css-loader/dist/cjs.js!./components/background.scss */ "./node_modules/css-loader/dist/cjs.js!./src/asset/scss/components/background.scss");
-/* harmony import */ var _node_modules_css_loader_dist_cjs_js_components_tile_scss__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! -!../../../node_modules/css-loader/dist/cjs.js!./components/tile.scss */ "./node_modules/css-loader/dist/cjs.js!./src/asset/scss/components/tile.scss");
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_media_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! -!../../../node_modules/css-loader/dist/cjs.js!./media.scss */ "./node_modules/css-loader/dist/cjs.js!./src/asset/scss/media.scss");
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_components_button_scss__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! -!../../../node_modules/css-loader/dist/cjs.js!./components/button.scss */ "./node_modules/css-loader/dist/cjs.js!./src/asset/scss/components/button.scss");
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_components_form_component_scss__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! -!../../../node_modules/css-loader/dist/cjs.js!./components/form-component.scss */ "./node_modules/css-loader/dist/cjs.js!./src/asset/scss/components/form-component.scss");
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_components_background_scss__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! -!../../../node_modules/css-loader/dist/cjs.js!./components/background.scss */ "./node_modules/css-loader/dist/cjs.js!./src/asset/scss/components/background.scss");
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_components_tile_scss__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! -!../../../node_modules/css-loader/dist/cjs.js!./components/tile.scss */ "./node_modules/css-loader/dist/cjs.js!./src/asset/scss/components/tile.scss");
 // Imports
+
 
 
 
@@ -31,13 +33,14 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 ___CSS_LOADER_EXPORT___.i(_node_modules_css_loader_dist_cjs_js_utility_scss__WEBPACK_IMPORTED_MODULE_2__["default"]);
-___CSS_LOADER_EXPORT___.i(_node_modules_css_loader_dist_cjs_js_components_button_scss__WEBPACK_IMPORTED_MODULE_3__["default"]);
-___CSS_LOADER_EXPORT___.i(_node_modules_css_loader_dist_cjs_js_components_form_component_scss__WEBPACK_IMPORTED_MODULE_4__["default"]);
-___CSS_LOADER_EXPORT___.i(_node_modules_css_loader_dist_cjs_js_components_background_scss__WEBPACK_IMPORTED_MODULE_5__["default"]);
-___CSS_LOADER_EXPORT___.i(_node_modules_css_loader_dist_cjs_js_components_tile_scss__WEBPACK_IMPORTED_MODULE_6__["default"]);
+___CSS_LOADER_EXPORT___.i(_node_modules_css_loader_dist_cjs_js_media_scss__WEBPACK_IMPORTED_MODULE_3__["default"]);
+___CSS_LOADER_EXPORT___.i(_node_modules_css_loader_dist_cjs_js_components_button_scss__WEBPACK_IMPORTED_MODULE_4__["default"]);
+___CSS_LOADER_EXPORT___.i(_node_modules_css_loader_dist_cjs_js_components_form_component_scss__WEBPACK_IMPORTED_MODULE_5__["default"]);
+___CSS_LOADER_EXPORT___.i(_node_modules_css_loader_dist_cjs_js_components_background_scss__WEBPACK_IMPORTED_MODULE_6__["default"]);
+___CSS_LOADER_EXPORT___.i(_node_modules_css_loader_dist_cjs_js_components_tile_scss__WEBPACK_IMPORTED_MODULE_7__["default"]);
 ___CSS_LOADER_EXPORT___.push([module.id, "@import url(https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500&display=swap);"]);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "* {\n  margin: 0;\n  padding: 0;\n  box-sizing: border-box;\n  font-family: \"Fira Code\", monospace, sans-serif;\n}\n\n:root {\n  --scroll-opacity: 0.50;\n  scrollbar-color: rgba(221, 221, 221, var(--scroll-opacity)) rgba(58, 58, 58, var(--scroll-scroll-opacity)) !important;\n  scrollbar-width: thin !important;\n}\n\n::-webkit-scrollbar {\n  width: 6px;\n}\n\n::-webkit-scrollbar-track {\n  background: rgba(221, 221, 221, var(--scroll-opacity));\n}\n\n::-webkit-scrollbar-thumb {\n  background: rgba(46, 54, 69, var(--scroll-opacity));\n}\n\n::-webkit-scrollbar-thumb:hover {\n  background: rgba(58, 58, 58, var(--scroll-opacity));\n}", "",{"version":3,"sources":["webpack://./src/asset/scss/style.scss"],"names":[],"mappings":"AASA;EACI,SAAA;EACA,UAAA;EACA,sBAAA;EACA,+CAAA;AAFJ;;AAOA;EACI,sBAAA;EAEA,qHAAA;EACA,gCAAA;AALJ;;AAQA;EACI,UAAA;AALJ;;AAQA;EACI,sDAAA;AALJ;;AAQA;EACI,mDAAA;AALJ;;AAQA;EACI,mDAAA;AALJ","sourcesContent":["// Import\r\n@import url(./utility.scss);\r\n@import url(./components/button.scss);\r\n@import url(./components/form-component.scss);\r\n@import url(./components/background.scss);\r\n@import url(./components/tile.scss);\r\n\r\n@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500&display=swap');\r\n\r\n* {\r\n    margin: 0;\r\n    padding: 0;\r\n    box-sizing: border-box;\r\n    font-family: \"Fira Code\", monospace, sans-serif;\r\n}\r\n\r\n// Copied from UnknownRori-Firebase-Source-Code\r\n\r\n:root {\r\n    --scroll-opacity: 0.50;\r\n\r\n    scrollbar-color: rgba(221, 221, 221, var(--scroll-opacity)) rgba(58, 58, 58, var(--scroll-scroll-opacity)) !important;\r\n    scrollbar-width: thin !important;\r\n}\r\n\r\n::-webkit-scrollbar {\r\n    width: 6px;\r\n}\r\n\r\n::-webkit-scrollbar-track {\r\n    background: rgba(221, 221, 221, var(--scroll-opacity));\r\n}\r\n\r\n::-webkit-scrollbar-thumb {\r\n    background: rgba(46, 54, 69, var(--scroll-opacity));\r\n}\r\n\r\n::-webkit-scrollbar-thumb:hover {\r\n    background: rgba(58, 58, 58, var(--scroll-opacity));\r\n}"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, "* {\n  margin: 0;\n  padding: 0;\n  box-sizing: border-box;\n  font-family: \"Fira Code\", monospace, sans-serif;\n}\n\n:root {\n  --scroll-opacity: 0.50;\n  scrollbar-color: rgba(221, 221, 221, var(--scroll-opacity)) rgba(58, 58, 58, var(--scroll-scroll-opacity)) !important;\n  scrollbar-width: thin !important;\n}\n\n::-webkit-scrollbar {\n  width: 6px;\n}\n\n::-webkit-scrollbar-track {\n  background: rgba(221, 221, 221, var(--scroll-opacity));\n}\n\n::-webkit-scrollbar-thumb {\n  background: rgba(46, 54, 69, var(--scroll-opacity));\n}\n\n::-webkit-scrollbar-thumb:hover {\n  background: rgba(58, 58, 58, var(--scroll-opacity));\n}", "",{"version":3,"sources":["webpack://./src/asset/scss/style.scss"],"names":[],"mappings":"AAUA;EACI,SAAA;EACA,UAAA;EACA,sBAAA;EACA,+CAAA;AAFJ;;AAOA;EACI,sBAAA;EAEA,qHAAA;EACA,gCAAA;AALJ;;AAQA;EACI,UAAA;AALJ;;AAQA;EACI,sDAAA;AALJ;;AAQA;EACI,mDAAA;AALJ;;AAQA;EACI,mDAAA;AALJ","sourcesContent":["// Import\r\n@import url(./utility.scss);\r\n@import url(./media.scss);\r\n@import url(./components/button.scss);\r\n@import url(./components/form-component.scss);\r\n@import url(./components/background.scss);\r\n@import url(./components/tile.scss);\r\n\r\n@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500&display=swap');\r\n\r\n* {\r\n    margin: 0;\r\n    padding: 0;\r\n    box-sizing: border-box;\r\n    font-family: \"Fira Code\", monospace, sans-serif;\r\n}\r\n\r\n// Copied from UnknownRori-Firebase-Source-Code\r\n\r\n:root {\r\n    --scroll-opacity: 0.50;\r\n\r\n    scrollbar-color: rgba(221, 221, 221, var(--scroll-opacity)) rgba(58, 58, 58, var(--scroll-scroll-opacity)) !important;\r\n    scrollbar-width: thin !important;\r\n}\r\n\r\n::-webkit-scrollbar {\r\n    width: 6px;\r\n}\r\n\r\n::-webkit-scrollbar-track {\r\n    background: rgba(221, 221, 221, var(--scroll-opacity));\r\n}\r\n\r\n::-webkit-scrollbar-thumb {\r\n    background: rgba(46, 54, 69, var(--scroll-opacity));\r\n}\r\n\r\n::-webkit-scrollbar-thumb:hover {\r\n    background: rgba(58, 58, 58, var(--scroll-opacity));\r\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -147,6 +150,32 @@ __webpack_require__.r(__webpack_exports__);
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
 ___CSS_LOADER_EXPORT___.push([module.id, ".tile {\r\n    width: 40px;\r\n    height: 40px;\r\n    border: 0.5 solid gray;\r\n    margin: 0.15rem;\r\n    text-align: center;\r\n    font-size: large;\r\n}", "",{"version":3,"sources":["webpack://./src/asset/scss/components/tile.scss"],"names":[],"mappings":"AAAA;IACI,WAAW;IACX,YAAY;IACZ,sBAAsB;IACtB,eAAe;IACf,kBAAkB;IAClB,gBAAgB;AACpB","sourcesContent":[".tile {\r\n    width: 40px;\r\n    height: 40px;\r\n    border: 0.5 solid gray;\r\n    margin: 0.15rem;\r\n    text-align: center;\r\n    font-size: large;\r\n}"],"sourceRoot":""}]);
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js!./src/asset/scss/media.scss":
+/*!*************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js!./src/asset/scss/media.scss ***!
+  \*************************************************************************/
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/sourceMaps.js */ "./node_modules/css-loader/dist/runtime/sourceMaps.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
+// Imports
+
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, "// Tablet & PC\r\n@media only screen and (max-width: 600px) {\r\n    .menu {\r\n        width: 80%;\r\n    }\r\n}\r\n\r\n// Mobile\r\n@media only screen and (min-width: 600px) {\r\n    .menu {\r\n        width: 30%;\r\n    }\r\n}", "",{"version":3,"sources":["webpack://./src/asset/scss/media.scss"],"names":[],"mappings":"AAAA;;IAEI;QACI,UAAU;IACd;AACJ;;AAEA;;IAEI;QACI,UAAU;IACd;AACJ","sourcesContent":["// Tablet & PC\r\n@media only screen and (max-width: 600px) {\r\n    .menu {\r\n        width: 80%;\r\n    }\r\n}\r\n\r\n// Mobile\r\n@media only screen and (min-width: 600px) {\r\n    .menu {\r\n        width: 30%;\r\n    }\r\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
