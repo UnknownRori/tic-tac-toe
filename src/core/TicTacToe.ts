@@ -1,6 +1,6 @@
 import ITicTacToe from "../interface/ITicTacToe";
 import Player from "../types/Player";
-import Navigation from "../types/Streak";
+import Navigation from "../types/Navigation";
 
 class TicTacToe implements ITicTacToe {
     // User generated rules
@@ -12,10 +12,10 @@ class TicTacToe implements ITicTacToe {
     public turn: Player = "X";
     public isStarted = false;
     public withAI = false;
-    public aiFirst: boolean = false;
+    public aiFirst = false;
     public gameTileElement: NodeListOf<HTMLElement>;
     public currentPlayerDisplay: HTMLElement;
-    private isAITurn: boolean = false;
+    private isAITurn = false;
     public totalTurn = 0;
 
     private winStreakRecord = {

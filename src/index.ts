@@ -1,6 +1,6 @@
 import TicTacToe from "./core/TicTacToe";
-import "./asset/scss/style.scss";
 import createTile from "./helpers/createTile";
+import "./asset/scss/style.scss";
 
 // Game enviroment
 const gameTileID = 'gameElement';
@@ -9,7 +9,7 @@ let withAI = false;
 let aiFirst = false;
 
 const gameElement = <HTMLElement>document.querySelector('#game');
-let gameTileElement = document.querySelectorAll(`#${gameTileID}`) as NodeListOf<HTMLElement>;
+let gameTileElement = <NodeListOf<HTMLElement>>document.querySelectorAll(`#${gameTileID}`);
 
 // Main Game UI
 const mapSizeElement = <HTMLInputElement>document.querySelector('#mapSize');
@@ -45,22 +45,14 @@ startGameButton.addEventListener('click', () => {
     const minStreak = parseInt(winStreakElement.value);
 
     // Check if the value below 2 or 1
-    if (mapSize < 1 || minTile < 2 || minStreak < 1) {
-        alert("Please enter above 1");
-        return;
-    }
+    if (mapSize < 1 || minTile < 2 || minStreak < 1) return alert("Please enter above 1");
 
     // Check if the rule set by player is logical
-    if (mapSize < minTile) {
-        alert("Minimum Tile to win cannot exceed map size");
-        return;
-    }
+    if (mapSize < minTile) return alert("Minimum Tile to win cannot exceed map size");
 
+    // Check if the game setting can trigger the win condition
     const minStreakThreshold = Math.floor(((mapSize * mapSize) / 2) / minTile);
-    if (minStreak > minStreakThreshold) {
-        alert("Minimum streak cannot pass threshold");
-        return;
-    }
+    if (minStreak > minStreakThreshold) return alert("Minimum streak cannot pass threshold");
 
     // Remove the event ui
     mainUIElement.classList.remove('bg-ui');
@@ -80,6 +72,7 @@ startGameButton.addEventListener('click', () => {
 
     // Start the game and init the event listener
     game.start(gameTileElement);
+
     gameTileElement.forEach((element) => {
         element.addEventListener('click', () => {
             const index = parseInt(<string>element.dataset[gameTileDataSet]);
@@ -94,6 +87,8 @@ resetGameButton.addEventListener('click', () => {
     mainUIElement.classList.add('bg-ui');
     newGameMenuUIElement.classList.remove('hidden');
     resetGameMenuUIElement.classList.add('hidden');
+
+    // Reset the game tile display
     gameElement.innerHTML = '';
 
     // Reset the game

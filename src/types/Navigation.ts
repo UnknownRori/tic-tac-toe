@@ -9,4 +9,4 @@ interface Navigation {
     bottomLeft: number,
 }
 
-export default Navigation
+export default Navigation;
