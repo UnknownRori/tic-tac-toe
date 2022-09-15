@@ -1099,16 +1099,14 @@ const createTile = (size, parent, id, data) => {
     let index = 0;
     for (let y = 0; y < size; y++) {
         const newDiv = document.createElement('div');
-        newDiv.classList.add('flex');
-        newDiv.classList.add('flex-row');
-        newDiv.classList.add('mx-auto');
+        newDiv.setAttribute('class', 'flex flex-row mx-auto');
         for (let x = 0; x < size; x++) {
             const newButton = document.createElement('button');
             newButton.classList.add('tile');
             newButton.setAttribute(`data-${data}`, index.toString());
             newButton.id = id;
-            index++;
             newDiv.appendChild(newButton);
+            index++;
         }
         parent.appendChild(newDiv);
     }
@@ -1130,8 +1128,8 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 const TicTacToe_1 = __importDefault(__webpack_require__(/*! ./core/TicTacToe */ "./src/core/TicTacToe.ts"));
-__webpack_require__(/*! ./asset/scss/style.scss */ "./src/asset/scss/style.scss");
 const createTile_1 = __importDefault(__webpack_require__(/*! ./helpers/createTile */ "./src/helpers/createTile.ts"));
+__webpack_require__(/*! ./asset/scss/style.scss */ "./src/asset/scss/style.scss");
 // Game enviroment
 const gameTileID = 'gameElement';
 const gameTileDataSet = 'tile';
@@ -1166,20 +1164,15 @@ startGameButton.addEventListener('click', () => {
     const minTile = parseInt(minTileElement.value);
     const minStreak = parseInt(winStreakElement.value);
     // Check if the value below 2 or 1
-    if (mapSize < 1 || minTile < 2 || minStreak < 1) {
-        alert("Please enter above 1");
-        return;
-    }
+    if (mapSize < 1 || minTile < 2 || minStreak < 1)
+        return alert("Please enter above 1");
     // Check if the rule set by player is logical
-    if (mapSize < minTile) {
-        alert("Minimum Tile to win cannot exceed map size");
-        return;
-    }
+    if (mapSize < minTile)
+        return alert("Minimum Tile to win cannot exceed map size");
+    // Check if the game setting can trigger the win condition
     const minStreakThreshold = Math.floor(((mapSize * mapSize) / 2) / minTile);
-    if (minStreak > minStreakThreshold) {
-        alert("Minimum streak cannot pass threshold");
-        return;
-    }
+    if (minStreak > minStreakThreshold)
+        return alert("Minimum streak cannot pass threshold");
     // Remove the event ui
     mainUIElement.classList.remove('bg-ui');
     newGameMenuUIElement.classList.add('hidden');
@@ -1207,6 +1200,7 @@ resetGameButton.addEventListener('click', () => {
     mainUIElement.classList.add('bg-ui');
     newGameMenuUIElement.classList.remove('hidden');
     resetGameMenuUIElement.classList.add('hidden');
+    // Reset the game tile display
     gameElement.innerHTML = '';
     // Reset the game
     game.reset();
